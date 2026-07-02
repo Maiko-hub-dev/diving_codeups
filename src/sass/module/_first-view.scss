@@ -1,9 +1,17 @@
 @use "../global/" as *;
 
+
 .first-view{
     @include mq("md") {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity transition-delay 2.8s ease-in;
         height: 100dvh;
     }
+}
+.first-view.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .view__swiper{
     height: inherit;
@@ -32,6 +40,7 @@
     font-size: 2.5rem;
     width: 100%;
     letter-spacing: 0.54em;
+    transition: 2s ease-in;
     @include mq("lg") {
         font-size: 5rem;
     }
@@ -40,5 +49,6 @@
     color: $white;
     font-family: $eng-fonts;
     text-align: center;
+    transition: 2s ease-in;
     font-size: 1.25rem;
 }

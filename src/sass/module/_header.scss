@@ -7,7 +7,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  top: 0;
+  top: -1.25rem;
   left: 0;
   right: 0;
   background-color: rgba($skelton, 0.68);
@@ -20,6 +20,12 @@
 //   @include mq("lxg") {
 //     height: 0;
 //   }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 2.8s ease;
+}
+.header.is-visible{
+  opacity: 1;
 }
 .header:has(.js-drawer.active) {
   background-color: $green;
