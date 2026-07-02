@@ -1,0 +1,16 @@
+@use "../global/" as *;
+
+.swiper-slide picture,
+.swiper-slide img {
+  width: 100%;
+  height: 100dvh;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after{
+  content: ""; /*contentを空にする*/
+}

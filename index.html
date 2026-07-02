@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>Diving-shop</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <!-- <link rel="icon" href="." /> -->
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+   <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+   
+   <!-- JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script type="module" src="/src/js/script.js"></script>
+</head>
+<body>
+    <header class="header js-header">
+      <div class="header__skelto">
+        <a href="index.html" class="header__link">
+          <img src="/src/images/common/logo.svg" alt="Divingショップロゴ" loading="lazy"/>
+        </a>
+      </div>
+        <!-- PCのナビゲーション -->
+      <ul class="header__nav">
+            <li class="header__navigation navigation">
+              <a href="#campaign" class="header__navigation-link navigation__link">
+                <span class="navigation__eng">campaign</span>
+                <span class="navigation__japan">キャンペーン</span>
+              </a>
+            </li>
+            <li class="header__navigation">
+              <a href="#aboutus" class="header__navigation-link">
+                <span class="navigation__eng">about&nbsp;us</span>
+                <span class="navigation__japan">私たちについて</span>
+              </a>
+            </li>
+            <li class="header__navigation">
+              <a href="#information" class="header__navigation-link">
+                <span class="navigation__eng">information</span>
+                <span class="navigation__japan">ダイビング情報</span>
+              </a>
+            </li>
+            <li class="header__navigation">
+              <a href="#care_price" class="header__navigation-link">
+                <span class="navigation__eng">blog</span>
+                <span class="navigation__japan">ブログ</span>
+              </a>
+            </li>
+            <li class="header__navigation">
+              <a href="#faq" class="header__navigation-link">
+                <span class="navigation__eng">voice</span>
+                <span class="navigation__japan">お客様の声</span>
+              </a>
+            </li>
+            <li class="header__navigation">
+              <a href="#faq" class="header__navigation-link">
+                <span class="navigation__eng">price</span>
+                <span class="navigation__japan">料金一覧</span>
+              </a>
+            </li>
+            <li class="header__navigation">
+              <a href="#faq" class="header__navigation-link">
+                <span class="navigation__eng">faq</span>
+                <span class="navigation__japan">よくある質問</span>
+              </a>
+            </li>
+            <li class="header__navigation">
+              <a href="#faq" class="header__navigation-link">
+                <span class="navigation__eng">contact</span>
+                <span class="navigation__japan">お問合せ</span>
+              </a>
+            </li>
+      </ul>
+
+      <div class="sp__btns header__btns">
+        <div class="header__menu-btn sp__btn hamberger js-hamberger u-mobile menu">
+          <span class="menu__button"></span>
+          <span class="menu__button2 menu__button"></span>
+          <span class="menu__button3 menu__button"></span>
+        </div>
+        <!--ハンバーガー-->
+      </div>
+      <!-- SPのドロワー -->
+      <div class="sp-nav js-drawer">
+        
+      <div class="sp-nav__drawers drawers header__drawer">
+      <div class="sp-nav__drawer drawers_drawer drawer header__drawer-content">
+        <ul class="drawer__items drawer-content">
+          <li class="drawer__item drawer__head">
+            <a href="#campaign" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">キャンペーン</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#licence" class="drawer__link">
+              <span class="drawer__link-content">ライセンス取得</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#rental" class="drawer__link">
+              <span class="drawer__link-content">貸切体験ダイビング</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#night-diving" class="drawer__link">
+              <span class="drawer__link-content">ナイトダイビング</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head">
+            <a href="#aboutus" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">私たちについて</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head">
+            <a href="#information" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">ダイビング情報</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#licence-get" class="drawer__link">
+              <span class="drawer__link-content">ライセンス講習</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#experiecse" class="drawer__link">
+              <span class="drawer__link-content">体験ダイビング</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#fan-diving" class="drawer__link">
+              <span class="drawer__link-content">ファンダイビング</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head">
+          <a href="#blog" class="drawer__link drawer__link-title">
+            <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+            <span class="drawer__link-main">ブログ</span>
+          </a>
+        </li>
+        </ul>
+        <ul class="drawer__items drawer-content">
+          <li class="drawer__item drawer__head">
+            <a href="#voice" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">お客様の声</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head">
+            <a href="#price" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">料金一覧</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#licence-get" class="drawer__link">
+              <span class="drawer__link-content">ライセンス講習</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#experiecse" class="drawer__link">
+              <span class="drawer__link-content">体験ダイビング</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head-content">
+            <a href="#fan-diving" class="drawer__link">
+              <span class="drawer__link-content">ファンダイビング</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head">
+            <a href="#blog" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">よくある質問</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head">
+            <a href="#blog" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">プライバシーポリシー</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head">
+            <a href="#blog" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">利用規約</span>
+            </a>
+          </li>
+          <li class="drawer__item drawer__head">
+            <a href="#blog" class="drawer__link drawer__link-title">
+              <img src="./src/images/common/hitode.png" class="drawer__logo" alt="ヒトデのアイコン">
+              <span class="drawer__link-main">お問い合わせ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+              
+      </div>
+      
+      </div><!--ドロワー-->
+
+    </header>
+  <main>
+  <div class="first-view">
+    <div class="first-view__inner view">
+    <div class="swiper view__swiper">
+    <div class="swiper-wrapper view__wrapper">
+      <div class="swiper-slide">
+        <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="./src/images/common/sp/fv-sp.jpg"
+        >
+        <img
+          src="./src/images/common/first-view.jpg"
+          alt="美しい海でウミガメが泳いでいる"
+        >
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="./src/images/common/sp/into-sea-sp.jpg"
+        >
+        <img src="./src/images/common/into-sea.jpg" alt="海でウミガメが自由に泳いでいる">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="./src/images/common/sp/into-sea-sp.jpg"
+        >
+        <img src="./src/images/common/into-sea.jpg" alt="海でダイビングをしようとする人たちとその船">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="./src/images/common/sp/beach-side-sp.jpg"
+        >
+        <img src="./src/images/common/beachside.jpg" alt="綺麗なビーチサイド">
+        </picture>
+      </div>
+    </div>
+
+    </div>
+    <div class="view__title diving-title">
+      <div class="diving-title__main">diving</div>
+      <div class="diving-title__sub">into the ocean</div>
+    </div>
+  </div>
+  </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

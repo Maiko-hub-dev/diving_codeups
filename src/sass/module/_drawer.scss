@@ -1,0 +1,80 @@
+@use "../global/" as *;
+
+.sp-nav{
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    background-color: $green;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    transition: 0.5s ease;
+    z-index: 999;
+}
+.sp-nav.active {
+    transform: translateX(0);
+}
+
+.sp-nav__drawer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.drawer__item,
+.drawer__item a,
+.drawer__link,
+.drawer__link-mail{
+  max-width: 100%;
+  box-sizing: border-box;
+//   overflow-x: hidden;
+  display: block;
+}
+.header__drawer-content{
+    padding: 1.5rem 0.9375rem;
+    height: 100dvh;
+}
+.drawer__items{
+    padding: 0;
+}
+.drawer-content{
+    color: $white;
+    width: 50%;
+    height: 100%;
+}
+.drawer__logo{
+    display: block;
+    width: 1.125rem;
+    height: 1.125rem;
+    
+    // @include mq("md") {
+    //     width: 0;
+    //     height: 0;
+    // }
+}
+
+.drawer__link-main{
+    font-size: 1rem;
+    font-family: $base-font-family;
+    font-weight: $bold;
+    display: inline-block;
+    margin-left: 0.25rem;
+}
+.drawer__link-content{
+    font-family: $base-font-family;
+    font-size: 1rem;
+}
+.drawer__item.drawer__head,
+.drawer__item.drawer__head-content
+{
+    margin-top: 1.5rem;
+}
+.drawer__link.drawer__link-title{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.drawer__item.drawer__head-content{
+    padding: 0 0 0 1.375rem;
+}

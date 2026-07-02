@@ -1,0 +1,61 @@
+@use "sass:map";
+
+// SPファーストかPCファーストか
+$startFrom: sp !default;
+
+// ブレークポイント
+$breakpoints: (
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px,
+);
+
+// メディアクエリ
+@mixin mq($bp: md) {
+  @if $startFrom == sp {
+    @media screen and (min-width: map.get($breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: calc(map.get($breakpoints, $bp) - 1px)) {
+      @content;
+    }
+  }
+}
+
+// ===== Utility =====
+
+// PCのみ表示
+.u-desktop {
+  @if $startFrom == sp {
+    display: none;
+
+    @include mq(md) {
+      display: block;
+    }
+  } @else {
+    display: block;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+}
+
+// SPのみ表示
+.u-mobile {
+  @if $startFrom == sp {
+    display: block;
+
+    @include mq(md) {
+      display: none;
+    }
+  } @else {
+    display: none;
+
+    @include mq(md) {
+      display: block;
+    }
+  }
+}

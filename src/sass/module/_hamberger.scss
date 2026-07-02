@@ -1,0 +1,64 @@
+@use "../global/" as *;
+
+$drawer-width: 32px;
+$drawer-height: 2px;
+$drawer-color: $white;
+$drawer-width-md: 40px;
+
+.hamberger {
+  transition: 0.5s ease;
+  width: 100%;
+  height: inherit;
+}
+
+.header__menu-btn.hamberger {
+  display: block;
+//   @include mq("md") {
+//     margin-right: 2rem;
+//   }
+//   @include mq("lxg") {
+//     margin-left: 0;
+//     display: none;
+//   }
+}
+
+.hamberger .menu__button {
+  position: absolute;
+  right: 0;
+  display: block;
+  z-index: 1001;
+  // margin: 0.75rem auto 0;
+  height: $drawer-height;
+  width: $drawer-width;
+  background-color: $white;
+  border-radius: 999px;
+  transform: scaleY(0.5);
+  transition: ease-in-out 0.5s;
+  @include mq("md") {
+    width: $drawer-width-md;
+  }
+}
+.menu__button:first-child{
+  top: 0;
+}
+
+.hamberger .menu__button:nth-child(2) {
+  top: 12px;
+}
+
+.hamberger .menu__button:nth-child(3) {
+  top: 24px;
+}
+.header__menu-btn.active span:nth-of-type(1){
+  -webkit-transform: translateY(10px) rotate(40deg) scaleY(.7);
+  transform: translateY(10px) rotate(40deg) scaleY(.7);
+}
+.header__menu-btn.active span:nth-of-type(2){
+  opacity: 0;
+}
+.header__menu-btn.active span:nth-of-type(3){
+  -webkit-transform: translateY(-10px) rotate(-40deg) scaleY(.7);
+  transform: translateY(-10px) rotate(-40deg) scaleY(.7);
+  top: 20px;
+}
+
