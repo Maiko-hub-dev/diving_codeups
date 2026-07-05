@@ -1,0 +1,196 @@
+@use "../global/" as *;
+
+.campaign{
+    width: 100%;
+}
+.campaign__inner{
+    padding: 2.5rem 0.9375rem 0;
+    margin-top: 2.5rem;
+    @include mq("lg") {
+        padding: 2.5em 5em;
+        margin-top: 2rem;
+    }
+}
+.campaign__container{
+    @include mq("lg") {
+        margin-top: 1rem;
+    }
+}
+.campaign__head {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+}
+.campaign__navigation {
+  display: none;
+  @include mq("lg") {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    min-width: 240px;
+    margin-top: 2.125rem;
+    margin-right: 6rem;
+  }
+}
+
+.campaign-button-prev,
+.campaign-button-next {
+    display: none;
+    @include mq("lg") {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid $green;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;   
+    }
+}
+.campaign-button-next{
+    @include mq("lg") {
+        margin-left: 4rem;
+    }
+}
+.campaign-button-next::before {
+  content: "";
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  width: 2rem;
+  height: 1px;
+  background: $green;
+  transform: translate(-60%, -50%);
+}
+
+.campaign-button-next::after {
+  content: "";
+  position: absolute;
+  top: 49.5%;
+  right: 38%;
+  width: 0.5rem;
+  height: 1rem;
+  border-top: 1px solid $green;
+  border-right: 1px solid $green;
+  transform: translate(50%, -50%)  skew(50deg) rotate(90deg);
+}
+.campaign-button-prev::before {
+  content: "";
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  width: 2rem;
+  height: 1px;
+  background: $green;
+  transform: translate(-40%, -50%);
+}
+.campaign-button-prev::after {
+  content: "";
+  position: absolute;
+  top: 49.5%;
+  left: 38%;
+  width: 0.5rem;
+  height: 1rem;
+  border-top: 1px solid $green;
+  border-left: 1px solid $green;
+  transform: translate(-50%, -50%) skew(-50deg) rotate(270deg);
+}
+.campaign__contents{
+    position: relative;
+    margin-top: 0.75rem;
+    @include mq("lg") {
+        margin-top: 1.65rem;
+    }
+}
+.slide__block{
+    width: 100%;
+    padding: 1rem;
+    @include mq("lg") {
+        padding: 1.5rem 1rem;
+    }
+}
+.slide__container{
+    @include mq("lg") {
+    padding-top: 0.65rem;
+    }
+}
+.slide__block-title{
+    display: inline-block;
+    color: $green;
+    border: $green solid 1px;
+    padding: 0.25rem 0.75rem;
+    line-height: 1.8333;
+    font-size: 0.75rem;
+    font-family: $base-font-family;
+    width: 6.75rem;
+    white-space: nowrap;
+    @include mq("lg") {
+        width: 7.25rem;
+        padding: 0.35rem 0.75rem 0.25rem;
+    }
+}
+.slide__block-txt{
+    color: $skelton;
+    line-height: 1.5;
+    font-weight: $medium;
+    line-height: 1.5;
+    margin-top: 4px;
+    @include mq("lg") {
+    }
+}
+.slide__line{
+    border: none;
+    border-top: $green 1px solid;
+}
+
+.slide__text{
+    color: $skelton;
+    font-size: 0.875rem;
+    line-height: 1.1714;
+    text-align: center;
+    @include mq("lg") {
+        font-size: 1rem;
+        width: 100%;
+        text-align: left;
+        padding: 0 1rem 0 3.65rem;
+    }
+}
+.slide__plices{
+    @include mq("lg") {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+    }
+}
+.slide__discount{
+    display: inline-block;
+    text-decoration: line-through $red;
+    text-decoration-thickness: 3px;
+    font-family: $lato-font;
+    font-size: 1.25rem;
+    font-weight: $bold;
+    @include mq("lg") {
+        padding-left: 1.25rem;
+        font-size: 1.5rem;
+    }
+}
+.slide__plice{
+    display: inline-block;
+    color: $green;
+    font-size: 2rem;
+    font-weight: $bold;
+    font-family: $lato-font;
+    @include mq("lg") {
+    font-size: 2.5rem;
+    padding-left: 1.25rem;
+    }
+}
+.swiper-slide.slide-content{
+    padding: 0;
+    box-shadow: 2px 2px 8px rgba($black, 0.25);
+}
+.campaign__btn.common__btn {
+    @include mq("lg") {
+        margin-top: 5.45rem;
+    }
+}

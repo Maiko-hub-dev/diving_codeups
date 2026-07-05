@@ -1,0 +1,127 @@
+@use "../global/" as *;
+
+.common-title{
+    font-family: $eng-fonts;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: $font-bk;
+    text-transform: capitalize;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq("lg") {
+        font-size: 2.5rem;
+        top: 1.75rem;
+        padding-left: 0.25rem;
+    }
+}
+.common-title::first-letter {
+  color: $green;    
+}
+.campaign__subtitle{
+    font-family: $base-font-family;
+    color: $green;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 0.25em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq("lg") {
+        padding-left: 0.25rem;
+        top: 5rem;
+    }
+}
+.common__btn--txt{
+    text-transform: capitalize;
+    color: $white;
+    font-family: $eng-fonts;
+    font-size: 0.875rem;
+    line-height: 1.571;
+    font-weight: $regular;
+}
+.common__btn--txt__down{
+    color: $white;
+    font-family: $eng-fonts;
+    font-size: 0.875rem;
+    line-height: 1.571;
+    font-weight: $regular;
+}
+.common__btn-wrap {
+  position: relative;
+  width: 12.625rem;
+  margin: 0 auto;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 4px;
+    left: 4px;
+    width: inherit;
+    height: 100%;
+    border: 1px solid $green;
+    &:hover{
+        border-top: transparent;
+        border-left: transparent
+    }
+  }
+}
+
+.common__btn {
+    display: flex;
+    align-items: flex-start;
+    background-color: $green;
+    border: 2px solid $green;
+    width: 12.625rem;
+    padding: 1rem 2.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: 2.5rem;
+    &::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+    z-index: -1;
+    }
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+  @include mq("lg") {
+    margin-top: 2.5rem;
+    padding: 0.875rem 2.45rem;
+  }
+}
+
+.common__btn:hover .common__btn--txt{
+    color: $green;
+}
+.common__btn:hover .common__btn--txt__down{
+    color: $green;
+}
+.common__btn--arrow{
+    display: inline-flex;
+    margin-left: 0.25rem;
+    margin-top: 0.35rem;
+}
+
+.common__btn--arrow::after{
+    content: '';
+    width: 2.5rem;
+    height: 6px;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+    transform: skew(45deg);
+    color: $white;
+}
+.common__btn:hover .common__btn--arrow::after{
+    color: $green;
+}
+

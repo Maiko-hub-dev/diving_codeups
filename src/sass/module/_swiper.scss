@@ -1,16 +1,61 @@
 @use "../global/" as *;
 
-.swiper-slide picture,
-.swiper-slide img {
+.view__swiper .swiper-slide picture,
+.view__swiper .swiper-slide img {
   width: 100%;
-  height: 100dvh;
+  height: 100%;
 }
 
 .swiper-slide img {
   display: block;
   object-fit: cover;
 }
-.swiper-button-prev:after,
-.swiper-button-next:after{
-  content: ""; /*contentを空にする*/
+
+.swiper2 {
+  width: 100%;
+  position: relative;
 }
+
+.swiper2 .swiper-wrapper {
+  transition-timing-function: linear;
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+.swiper2 .swiper-slide {
+  width: 223px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 auto;   
+    @include mq("lg"){
+    width: 333px;
+  }
+}
+
+.swiper2 .swiper-slide img {
+    // align-self: center; /* 上下の中央揃え */
+    max-height: 188px;
+    width: 100%;
+    height: 223px;
+    // aspect-ratio: (280/ 188);
+    object-fit: cover; 
+    @include mq("lg") {
+      aspect-ratio: (333/ 223);
+      min-height: 223px;
+      max-width: 333px;
+    }
+}
+
+.swiper2 .swiper-slide .slide__block {
+  width: 100%;
+  max-width: 333px;
+  box-sizing: border-box;
+}
+.swiper2 .slide__block {
+  width: 333px;
+}
+
+

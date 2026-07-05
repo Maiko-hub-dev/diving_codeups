@@ -1,0 +1,172 @@
+@use "../global/" as *;
+
+.aboutus {
+    width: 100%;
+}
+.aboutus__inner {
+    padding: 0 1rem 0 0.875rem;
+    margin-top: 5rem;
+    @include mq("lg") {
+    padding: 2.5em 1.25rem;
+    margin-top: 8.75rem;
+    }
+}
+
+.aboutus__container{
+    width: 100%;
+    position: relative;
+    @include mq("lg") {
+        padding: 0 2rem;
+    }
+}
+
+.aboutus__wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    @include mq("md") {
+    justify-content: center;
+    align-items: center;
+    padding: 0 clamp(2rem, 3vw, 3rem);
+}
+    @include mq("lg") {
+        margin-top: 5rem;
+        padding: 0 clamp(4rem, 7vw, 8rem);
+    }
+}
+.aboutus__title.common-title{
+    position: relative;
+}
+.aboutus__framework{
+    display: flex;
+    position: relative;
+    margin-top: 1.75rem;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 345 / 212; // Figmaの画像全体の比率
+}
+.framework__left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 35%;
+    z-index: 3;
+    object-fit: cover;
+    @include mq("md") {
+        width: 37%;
+        max-width: 400px;
+    }
+    @include mq("lg") {
+        width: min(39.1%);
+        max-width: 606px;
+    }
+}
+.framework__right{
+    display: block;
+    position: absolute;
+    right: 0;
+    padding-top: 1.75rem;
+    width: min(81%);
+    object-fit: cover;
+    @include mq("md") {
+        padding-top: 1rem;
+        bottom: 0;
+    }
+    @include mq("lg") {
+        padding-top: clamp(2rem, 3vh,10%);
+        width: min(81%);
+        // max-width: 880px;
+    }
+}
+.framework__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.aboutus__contents{
+    position: relative;
+    margin-top: 2.5rem;
+    @include mq("md") {
+        position: absolute;
+        z-index: 2;
+        min-width: 560px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        margin-top: 1rem;
+     
+    }
+    @include mq("lg") {
+        min-width: initial;
+    }
+}
+.aboutus__content{
+    display: flex;
+    flex-direction: column;
+    @include mq("md") {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0;
+        width: 100%;
+    }
+    @include mq("lg") {
+        justify-content: space-around;
+    }
+}
+.aboutus__message{
+    color: $green;
+    font-family: $eng-fonts;
+    font-size: 2.5rem;
+    @include mq("md") {
+        font-size: clamp(2rem, 5vw, 4rem);
+        color: $white;
+        transform: translateX(20px);
+    }
+    @include mq("lg") {
+        min-width: 360px;
+        font-size: clamp(3rem, 5vw, 5rem);
+    }
+    @include mq("xl") {
+        min-width: 400px;
+        transform: translateX(0);
+    }
+}
+
+.aboutus__messages{
+    margin-top: 1rem;
+    @include mq("md") {
+    max-width: 280px;
+    margin-left: 1rem;
+    margin-top: 0;
+    transform: translateX(10px);
+    }
+@include mq("lg") {
+    margin-left: 0;
+    transform: translateX(0);
+    min-width: 400px;
+    }
+}
+.aboutus__message--txt{
+    color: $font-bk;
+    font-family: $base-font-family;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    font-weight: $regular;
+    @include mq("md") {
+        color: $white;
+        letter-spacing: 0.04em;
+    }
+}
+.aboutus__btn{
+    @include mq("md") {
+        margin-top: 2.5rem;
+        transition: border 0.5s ease;
+    }
+}
+.aboutus__btn:hover{
+    @include mq("md") {
+        border: 1px solid $white
+    }
+}

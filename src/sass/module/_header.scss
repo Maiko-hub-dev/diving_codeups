@@ -14,15 +14,16 @@
   transition: background-color 0.3s ease;
   z-index: 9999;
   padding: 1.3125rem 0.9375rem;
-//   @include mq("md") {
-//     background-color: initial;
-//   }
-//   @include mq("lxg") {
-//     height: 0;
-//   }
   opacity: 0;
   transform: translateY(20px);
   transition: 2.8s ease;
+  @include mq("lg") {
+    height: 5.625em;
+    transform: translateY(0);
+    padding: 0.5rem 2.5rem;
+    top: 0;
+    justify-content: flex-start;
+  }
 }
 .header.is-visible{
   opacity: 1;
@@ -32,26 +33,32 @@
 }
 .header__skelto {
   display: block;
-  height: inherit;
-  @include mq("md") {
-    padding: 0;
+  height: 5rem;
+  @include mq("lg") {
+    padding-top: 0.75rem;
   }
-  @include mq("lxg") {
+}
+.header__link{
+  display: block;
+  width: 6.375rem;
+  @include mq("lg") {
+    width: 8.3125rem;
   }
 }
 .header__nav {
   display: none;
-  
   @include mq("md") {
     padding: 0;
   }
   @include mq("lg") {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: auto;
+    justify-content: space-between;
     height: inherit;
     max-width: 100%;
+    min-width: 707px;
+    padding-top: 1rem;
+    margin-left: 28.5%;
   }
 }
 .header__btns {
@@ -86,18 +93,32 @@
   display: none;
   @include mq("lg"){
       display: block;
-      height: inherit;
+      height: 5rem;
       white-space: nowrap;
-      font-size: 0.655rem;
-      padding:  0 0;
+      padding: 0;
+      // margin-left: 1.25rem;
   }
 }
-.header__navigation:not(:first-child){
+.header__navigation:first-child{
     @include mq("lg"){
-        margin-left: 0.75rem;
+        margin-left: 1.25rem;
     }
 }
-
+.header__navigation.header__navigation-link2{
+  @include mq("lg") {
+    margin-left: 2rem;
+  }
+}
+.header__navigation.header__navigation-link3{
+  @include mq("lg") {
+    margin-left: 2.5rem;
+  }
+}
+.header__navigation.header__navigation-link4{
+  @include mq("lg") {
+    margin-left: 3.75rem;
+  }
+}
 .header__navigation-link {
   display: none;
   @include mq("lg"){
@@ -108,15 +129,18 @@
     padding: 0 0;
   }
 }
+
+
 .navigation__eng{
   display: none;
   @include mq("md") {
     color: $white;
-    display: block;
+    display: inline-block;
     text-align: center;
     font-family: $eng-fonts;
     text-transform: capitalize;
     font-size: 1.125rem;
+    font-weight: $regular;
   }
 }
 .navigation__japan{
@@ -126,7 +150,28 @@
     display: block;
     font-family: $base-font-family;
     font-size: 0.625rem;
+    line-height: 1;
     text-align: center;
+    padding: 0.25em 0 0;
   }
 }
-
+.navigation__japan.navigation__japan--info{
+  display: none;
+  @include mq("md") {
+    color: $white;
+    display: block;
+    font-family: $base-font-family;
+    font-size: 0.625rem;
+    line-height: 1;
+    text-align: right;
+  }
+}
+.navigation__txt{
+  display: none;
+  @include mq("md") {
+    color: $white;
+    display: inline-block;
+    font-family: $eng-fonts;
+    font-weight: $regular;
+  }
+}

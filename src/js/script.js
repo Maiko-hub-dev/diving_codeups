@@ -1,4 +1,7 @@
 import "../sass/style.scss";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
   window.addEventListener("load", () => {
@@ -11,8 +14,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     firstView.classList.add("is-visible");
     headerOn.classList.add("is-visible");
 
-    // ここでSwiper初期化
-    initSwiper();
   }, 1500);
 
 //. swiper FV
@@ -25,10 +26,35 @@ const swiper = new Swiper('.swiper', {
   },
   effect: 'fade', 
     autoplay: {
+      duration: 10000,
     delay: 4000, // 4秒後に次のスライドへ
     disableOnInteraction: false, // ユーザーが操作しても自動再生を継続
   },
   speed: 2000, //追加
+});
+// Swiperの初期化
+const swiper2 = new Swiper(".swiper2", {
+  loop: true, // ループ有効
+  speed: 500, // ループの時間
+  // allowTouchMove: false, 
+    navigation: {
+    nextEl: ".campaign-button-next",
+    prevEl: ".campaign-button-prev",
+  },
+  slidesPerView: '2', // ← SP基準をここに置く
+  spaceBetween: 24,
+  autoplay: {
+      delay: 3000, // 途切れなくループ
+      disableOnInteraction: false,
+  },
+  breakpoints: {
+      767: {
+          slidesPerView: 'auto', // PC表示
+          spaceBetween: 40,
+      }
+  },
+  // freeMode: false,
+  // freeModeMomentum: false,
 });
 
 });
@@ -48,24 +74,14 @@ elems.forEach(el => {
   }
 });
     
-// スクロールしたらヘッダー追従
-$(window).on("scroll", function () {
-  // ファーストビューの高さを取得
-  mvHeight = $(".js-main").height();
-  if ($(window).scrollTop() > mvHeight) {
-    // スクロールの位置がファーストビューより下の場合にclassを付与
-    $(".header").addClass("header-scroll");
-  } else {
-    // スクロールの位置がファーストビューより上の場合にclassを外す
-    $(".header").removeClass("header-scroll");
-  }
-});
 
 $(".js-hamberger").on("click", function () {
     $(this).toggleClass("active");
     $(".sp-nav").toggleClass("active");
 });
-
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 //. loading
  //logoの表示
 window.addEventListener("load", async () =>{
