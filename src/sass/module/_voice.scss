@@ -1,0 +1,211 @@
+@use "../global/" as *;
+
+.voice {
+    width: 100%;
+}
+.voice__inner {
+    padding: 0 1rem 0 0.875rem;
+    margin-top: 5rem;
+    @include mq("lg") {
+    padding: 2.5em 1.25rem 3.125rem;
+    margin-top: 5rem;
+    }
+}
+.voice__container {
+    padding: 0 1.3125rem;
+    position: relative;
+    z-index: -1;
+}
+.voice__subtitle{
+    font-family: $base-font-family;
+    color: $green;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 0.25em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    @include mq("lg") {
+        padding-left: 0.25rem;
+        top: 2rem;
+    }
+}
+.voice__titles{
+    position: relative;
+    @include mq("lg") {
+        margin: 0 auto;
+    }
+}
+.voice__title.common-title{
+    font-family: $eng-fonts;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: $font-bk;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq("md") {
+        color: $font-bk;
+    }
+    @include mq("lg") {
+        font-size: 2.5rem;
+        top: 1.75rem;
+        padding-left: 0.25rem;
+    }
+}
+
+.voice__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.0625rem;
+    @include mq("md") {
+        flex-direction: row;
+        margin: 2.5rem auto 0;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+    @include mq("lg") {
+        margin-top: 0 auto;
+        padding-top: 5rem;
+        min-width: 1080px;
+    }
+}
+.voice__card{
+    box-shadow: 2px 2px 8px rgba($black, 0.25);
+    padding: 1.5rem 1rem;
+    background-color: $white;
+    width: 100%;
+    @include mq("md") {
+        min-width: 333px;
+    }
+    @include mq("lg") {
+        width: 520px;
+    }
+}
+.voice__card:not(:first-child){
+    margin-top: 2.9375rem;
+    @include mq("md") {
+        margin-top: 0;
+    }
+}
+.voice__card--image{
+    display: block;
+}
+.voice__card--contents{
+    display: flex;
+    @include mq("md") {
+        padding: 0 clamp(0.25rem, 0.5vw, 1rem);
+    }
+    @include mq("lg") {
+        padding: 0;
+    }
+}
+.voice__card-date{
+    color: $font-bk;
+    font-family: $eng-fonts;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+.voice__card--titles{
+    border-bottom: 1px solid $green;
+    padding: 0 0 0.25rem 0;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    @include mq("lg") {
+        width: 47.6%;
+    }
+}
+.voice__card-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0.25rem;
+    @include mq("md") {
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 0.5rem;
+    }
+}
+.voice__card-age{
+    font-size: 0.75rem;
+    color: $font-bk;
+    width: fit-content;
+}
+.voice__card-title{
+    font-family: $base-font-family;
+    font-weight: $medium;
+    @include mq("md") {
+        font-size: clamp(1rem, 1vw, 2rem);
+    }
+}
+.voice__card--image{
+    display: block;
+    width: 48.24%;
+    aspect-ratio: (151/ 117);
+    margin-left: 0.8125rem;
+    object-fit: cover;
+    @include mq("md") {
+        width: min(38.24%, 120px);
+    }
+    @include mq("lg") {
+        width: 48.24%;
+    }
+}
+.voice__card--line{
+    border: none;
+    border: 1px solid $green;
+    line-height: 1;
+}
+.voice__card--txt{
+    color: $font-bk;
+    line-height: 1.5;
+    padding: 1rem 0 0 0;
+    @include mq("md") {
+        padding: 2.5rem 0;
+    }
+}
+.voice__active-content{
+    display: inline-block;
+    color: $green;
+    border: $green solid 1px;
+    padding: 0.25rem 0.75rem;
+    line-height: 1.8333;
+    font-size: 0.75rem;
+    font-family: $base-font-family;
+    width: 6.75rem;
+    white-space: nowrap;
+    @include mq("md") {
+        margin-top: 1rem;
+    }
+    @include mq("lg") {
+        margin-top: 0;
+        width: 7.25rem;
+    }
+}
+.voice__btn.common__btn{
+    @include mq("md") {
+        margin-top: 5rem;
+    }
+}
+.voice__illust{
+    @include mq("lg") {
+    position: absolute;
+    width: 4.4375rem;
+    background-image: url("../../images/common/seahorse.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    bottom: -5rem;
+    right: 11.25rem;
+    z-index: 2;
+    aspect-ratio: (71 / 162);
+    }
+    
+}

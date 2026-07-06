@@ -1,0 +1,103 @@
+@use "../global/" as *;
+
+.information{
+    width: 100%;
+    margin-top: 4.375rem;
+    background-color: $light-green;
+}
+.information__inner{
+    padding: 5rem 0.9375rem;
+    @include mq("md") {
+        padding: 5.25rem 2.5rem;
+    }
+    @include mq("lg") {
+        padding: 6.25rem 5.625rem;
+    }
+}
+.information__container{
+    padding: 0;
+    @include mq("lg") {
+    padding: 0 5.625rem;
+    }
+}
+.information__subtitle{
+    font-family: $base-font-family;
+    color: $green;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 0.25em;
+    padding-left: 0.25rem;
+    position: relative;
+
+    @include mq("lg") {
+        top: 2rem;
+}
+}
+.information__licence{
+    margin-top: 1.5rem;
+}
+.information__line{
+    border: 0;
+    border-top: 1px solid $green;
+}
+.common-title.information__title{
+    font-family: $eng-fonts;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: $font-bk;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    @include mq("lg") {
+        font-size: 2.5rem;
+        top: 1.75rem;
+        padding-left: 0.25rem;
+    }
+}
+
+.information__wrapper{
+    display: flex;
+    flex-direction: column;
+    @include mq("lg") {
+        flex-direction: row;
+        align-items: center;
+        padding-top: 2.5rem;
+    }
+}
+.information__frame{
+    display: block;
+    margin-top: 2.5rem;
+    @include mq("lg") {
+        width: 50%;
+    }
+}
+.information__content{
+    @include mq("lg") {
+        margin-left: 3rem;
+    }
+}
+.information__title-sub{
+    font-family: $base-font-family;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: $font-bk;
+    line-height: 1.2;
+    font-weight: $bold;
+    text-shadow: 1px 1px 1px $green;
+    @include mq("lg") {
+    font-size: 1.5rem;
+    text-shadow: none;
+    // -webkit-text-stroke-color: none;
+    // -webkit-text-stroke-width: 0;
+    }
+}
+.information__description{
+    color: $font-bk;
+    font-family: $base-font-family;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px $green;
+    @include mq("lg") {
+    text-shadow: none;
+    }
+}

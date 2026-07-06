@@ -1,0 +1,183 @@
+@use "../global/" as *;
+
+.blog {
+    width: 100%;
+}
+.blog__inner{
+    position: relative;
+    @include mq("md") {
+    &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 31.25rem;
+    background-image: url("../../images/common/transparent-sea.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    z-index: -1;
+        }
+    }
+}
+.blog__illust{
+    @include mq("lg") {
+        position: absolute;
+        background-image: url('../../images/common/fishes.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: min(27.3125rem, 30%);
+        aspect-ratio: (437/ 201);
+        margin-top: 1.5rem;
+        margin-left: 6.26rem;
+    }
+}
+.blog__fishes-illust{
+    @include mq("lg") {
+    position: absolute;
+    background-image: url('../../images/common/fishes-to-right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: min(18.8125rem, 30%);
+    aspect-ratio: (437/ 201);
+    margin-top: 1.5rem;
+    margin-left: 6.26rem;
+}
+}
+.blog__container {
+    padding: 5rem 1.3125rem;
+}
+.blog__wrapper {
+    @include mq("md") {
+        padding: 0 2.5rem;
+    }
+    @include mq("lg") {
+        padding: 0 5rem;
+    }
+    @include mq("xl") {
+        padding: 0 10rem;
+     }
+}
+.blog__titles{
+    position: relative;
+    @include mq("lg") {
+        margin: 0 auto;
+    }
+}
+.blog__title{
+    font-family: $eng-fonts;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: $font-bk;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq("md") {
+        color: $white;
+    }
+    @include mq("lg") {
+        font-size: 2.5rem;
+        top: 1.75rem;
+        padding-left: 0.25rem;
+    }
+}
+.blog__title::first-letter {
+  color: $green;
+  @include mq("md") {
+    color: $white;
+  }    
+}
+.blog__subtitle{
+    font-family: $base-font-family;
+    color: $green;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 0.25em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq("md") {
+        color: $white;
+    }
+    @include mq("lg") {
+        padding-left: 0.25rem;
+        top: 2rem;
+    }
+}
+
+.blog__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.0625rem;
+    @include mq("md") {
+        flex-direction: row;
+        margin: 2.5rem auto 0;
+        gap: 2.5rem;
+        justify-content: center;
+    }
+    @include mq("lg") {
+        margin-top: 0 auto;
+        padding-top: 5rem;
+    }
+}
+.blog__card{
+    box-shadow: 2px 2px 8px rgba($black, 0.25);
+    padding: 1.4375rem 1rem;
+    background-color: $white;
+    width: 100%;
+    @include mq("md") {
+        
+        width: 333px;
+    }
+    @include mq("lg") {
+        padding: 1rem;
+    }
+}
+.blog__card:not(:first-child){
+    margin-top: 2.9375rem;
+    @include mq("md") {
+        margin-top: 0;
+    }
+}
+.blog__card--image{
+    display: block;
+}
+.blog__card--contents{
+    padding: 1.5rem 0 1.0625rem;
+}
+.blog__card-date{
+    color: $font-bk;
+    font-family: $eng-fonts;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+.blog__card--titles{
+    border-bottom: 1px solid $green;
+    padding: 0 0 0.25rem 0;
+}
+.blog__card-title{
+    font-family: $base-font-family;
+    font-weight: $medium;
+}
+.blog__card--line{
+    border: none;
+    border: 1px solid $green;
+    line-height: 1;
+}
+.blog__card--txt{
+    color: $font-bk;
+    line-height: 1.5;
+    padding: 1rem 0 0 0;
+}
+.common__btn.blog__btn{
+    @include mq("lg") {
+        margin-top: 5rem;
+    }
+}

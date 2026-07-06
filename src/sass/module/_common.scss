@@ -29,6 +29,26 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    top: 0;
+    @include mq("md") {
+        top: 0;
+        aspect-ratio: (72 / 16);
+    }
+    @include mq("lg") {
+        padding-left: 0.25rem;
+        top: 5rem;
+    }
+}
+.aboutus__subtitle{
+    font-family: $base-font-family;
+    color: $green;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 0.25em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     @include mq("lg") {
         padding-left: 0.25rem;
         top: 5rem;

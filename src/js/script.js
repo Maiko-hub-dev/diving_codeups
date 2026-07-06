@@ -19,14 +19,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 //. swiper FV
 const swiper = new Swiper('.swiper', {
   loop: true,
-
+  slidesPerView: "auto",
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   effect: 'fade', 
     autoplay: {
-      duration: 10000,
+    duration: 10000,
     delay: 4000, // 4秒後に次のスライドへ
     disableOnInteraction: false, // ユーザーが操作しても自動再生を継続
   },
@@ -41,7 +41,7 @@ const swiper2 = new Swiper(".swiper2", {
     nextEl: ".campaign-button-next",
     prevEl: ".campaign-button-prev",
   },
-  slidesPerView: '2', // ← SP基準をここに置く
+  slidesPerView: 'auto', // ← SP基準をここに置く
   spaceBetween: 24,
   autoplay: {
       delay: 3000, // 途切れなくループ
