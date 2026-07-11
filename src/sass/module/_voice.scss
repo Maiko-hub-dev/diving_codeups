@@ -142,7 +142,10 @@
     font-family: $base-font-family;
     font-weight: $medium;
     @include mq("md") {
-        font-size: clamp(1rem, 1vw, 2rem);
+        font-size: clamp(0.75rem, 0.75vw, 1rem);
+    }
+    @include mq("lg") {
+        font-size: clamp(1em, 1vw, 2rem);
     }
 }
 .voice__card--image{
@@ -151,11 +154,12 @@
     aspect-ratio: (151/ 117);
     margin-left: 0.8125rem;
     object-fit: cover;
-    @include mq("md") {
-        width: min(38.24%, 120px);
-    }
+    // @include mq("md") {
+    //     width: min(38.24%, 120px);
+    // }
     @include mq("lg") {
         width: 48.24%;
+        margin: 0 auto;
     }
 }
 .voice__card--line{

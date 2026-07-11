@@ -1,6 +1,7 @@
 import "../sass/style.scss";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
+import './jquery.inview.min.js';
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
@@ -15,6 +16,47 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     headerOn.classList.add("is-visible");
 
   }, 1500);
+
+  let imgHeight = $('.js-first-view').outerHeight();
+  let topBtn = $('.pagetop');
+  const footer = $('.footer');
+  topBtn.hide();
+
+  // ボタンの表示設定
+  $(window).on('scroll resize', function (){
+    const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    const footerTop = footer.offset().top;
+    
+    const overlap = scrollTop + windowHeight - footerTop;
+
+
+  // ===== ボタンの表示・非表示 =====
+  if (scrollTop > imgHeight) {
+    topBtn.fadeIn();
+  } else {
+    topBtn.fadeOut();
+  }
+  // ===== footerに重ならないようにする =====
+  if (overlap > 0) {
+      topBtn.css({
+          bottom: overlap + 20
+        });
+      } else {
+        topBtn.css({
+          bottom: 20
+        });
+  } 
+  });
+
+  // ボタンをクリックしたらスクロールして上に戻る
+  topBtn.click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 300, 'swing');
+    return false;
+  });
+
 
 //. swiper FV
 const swiper = new Swiper('.swiper', {
@@ -73,7 +115,71 @@ elems.forEach(el => {
     el.textContent = text.slice(0, 15) + '...';
   }
 });
-    
+//要素の取得とスピードの設定
+
+ const speed = 700;
+
+$('.js-color-slide').each(function () {
+
+    const color = $(this).find('.info-colorbox');
+    const image = $(this).find('.info-color-image');
+
+    image.css('opacity', 0);
+
+    color.css({
+        width: 0,
+        right: 0,
+        left: 'auto'
+    });
+
+    let played = false;
+
+    $(this).on('inview', function (event, isInView) {
+ if (isInView) {
+
+        color.stop(true, true).css({
+            width: 0,
+            right: 0,
+            left: 'auto'
+        });
+
+        image.css('opacity', 0);
+
+        color.animate({
+            width: '100%'
+        }, speed, function () {
+
+            image.animate({
+                opacity: 1
+            }, 200);
+
+            color.css({
+                left: 0,
+                right: 'auto'
+            });
+
+            color.animate({
+                width: 0
+            }, speed);
+
+        });
+
+    } else {
+
+        // 画面外に出たら初期状態へ戻す
+        image.css('opacity', 0);
+
+        color.stop(true, true).css({
+            width: 0,
+            left: 'auto',
+            right: 0
+        });
+
+      
+    };
+  });
+});
+
 
 $(".js-hamberger").on("click", function () {
     $(this).toggleClass("active");

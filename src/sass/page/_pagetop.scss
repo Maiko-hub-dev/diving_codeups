@@ -1,0 +1,56 @@
+@use "../global" as *;
+
+.pagetop {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid $green;
+    right: 0.9375rem;
+    border-radius: 50%;
+    cursor: pointer;
+    bottom: 19.5rem;
+    background-color: $white;
+    transition: 0.3s background-color;
+    @include mq("lg") {
+    bottom: min(39.9375rem, 7%);
+    }
+}
+.pagetop a {
+    display: block;
+}
+.pagetop:hover{
+    background-color: $green;
+}
+.pagetop:hover{
+    border: 1px solid $white;
+}
+.pagetop::before {
+  content: "";
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  width: 2.35rem;
+  height: 1px;
+  background: $green;
+  transform: translate(-50%) rotate(-90deg);
+}
+.pagetop:hover::before{
+    background: $white;
+}
+
+.pagetop::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 57.5%;
+  width: 1px;
+  height: 1.25rem;
+  border-top: 1px solid $green;
+  border-left: 1px solid $green;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0.7);
+}
+.pagetop:hover::after{
+    background: $white;
+    border-top: 1px solid $white;
+    border-left: 1px solid $white;
+}
