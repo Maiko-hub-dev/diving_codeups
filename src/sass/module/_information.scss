@@ -3,21 +3,30 @@
 .information{
     width: 100%;
     margin-top: 4.375rem;
-    background-color: $light-green;
+    @include mq("lg") {
+        margin-top: 5.65rem;
+      
+    }
 }
 .information__inner{
     padding: 5rem 0.9375rem;
+    background-color: $light-green;
     @include mq("md") {
         padding: 5.25rem 2.5rem;
     }
     @include mq("lg") {
-        padding: 6.25rem 5.625rem;
+          padding: 4.25rem 5.5rem 6.125rem;
     }
 }
 .information__container{
     padding: 0;
     @include mq("lg") {
-    padding: 0 5.625rem;
+    padding: 0 5rem;
+    }
+}
+.information__titles{
+    @include mq("lg") {
+        padding: 0 0.5rem;
     }
 }
 .information__subtitle{
@@ -32,15 +41,18 @@
 
     @include mq("lg") {
         top: 2rem;
+        margin-top: 0;
+        margin-left: -1rem;
 }
 }
 .information__licence{
     margin-top: 1.5rem;
+    @include mq("lg") {
+        margin-top: 2.125rem;
+        // padding-left: 1rem;
+    }
 }
-.information__line{
-    border: 0;
-    border-top: 1px solid $green;
-}
+
 .common-title.information__title{
     font-family: $eng-fonts;
     font-size: 2rem;
@@ -53,23 +65,33 @@
         font-size: 2.5rem;
         top: 1.75rem;
         padding-left: 0.25rem;
+        margin-left: -0.5rem;
     }
 }
-
+.information__frame{
+    @include mq("lg") {
+        width: 100%;
+        display: block;
+        max-width: 540px;
+    }
+}
 .information__wrapper{
     display: flex;
     flex-direction: column;
     @include mq("lg") {
         flex-direction: row;
         align-items: center;
-        padding-top: 2.5rem;
+        padding: 2rem 0.5rem 0;
+        justify-content: flex-start;
     }
 }
 .information__colorbox{
     display: block;
     margin-top: 2.5rem;
     @include mq("lg") {
+        margin-top: 2.35rem;
         width: 50%;
+        margin-right: 1rem;
     }
 }
 .js-color-slide{
@@ -95,7 +117,8 @@
     z-index: 1;
     @include mq("lg") {
         width: 50%;
-        margin-left: 3rem;
+        margin-left: 1.5rem;
+        max-width: 492px;
     }
 }
 .information__title-sub{
@@ -105,7 +128,10 @@
     color: $font-bk;
     line-height: 1.2;
     font-weight: $bold;
-    text-shadow: 1px 1px 1px $green;
+    border-bottom: 1px solid $green;
+    padding-bottom: 0.125rem;
+    padding: 0 0 0.125rem 0.125rem;
+    text-shadow: 1px 1px 1px $font-bk;
     @include mq("lg") {
     font-size: 1.5rem;
     text-shadow: none;
@@ -119,6 +145,18 @@
     line-height: 1.5;
     text-shadow: 1px 1px 1px $green;
     @include mq("lg") {
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    font-weight: $regular;
+    margin: 0.5rem 0;
     text-shadow: none;
+    padding: 0 0.25rem;
+    min-width: 492px;
     }
+}
+.information__viewmore.common__btn-wrap{
+    @include mq("lg") {
+        width: 12.725rem;
+        // transform: translateX(-0.5rem);
+}
 }

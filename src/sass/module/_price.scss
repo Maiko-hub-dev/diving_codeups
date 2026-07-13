@@ -3,6 +3,9 @@
 .price {
     width: 100%;
     margin-top: 5rem;
+    @include mq("lg") {
+    margin-top: 5.75rem;
+    }
 }
 .price__inner {
     @include mq("lg") {
@@ -18,7 +21,10 @@
     @include mq("lg") {
     padding: 3.25rem 5.4375rem 3.75rem;
     position: relative;
-    z-index: -1;
+    z-index: 0;
+    }
+    @include mq("xl") {
+    padding: 3.25rem 5.4375rem 6.5rem;
     }
 }
 .price__titles{
@@ -28,6 +34,11 @@
 }
 .price__title.common-title{
     position: relative;
+    @include mq("lg") {
+        top: 2.75rem;
+        padding-left: 0;
+        margin-left: -0.25rem;
+    }
 }
 .price__subtitle{
     font-family: $base-font-family;
@@ -41,8 +52,9 @@
     transform: translateX(-50%);
     top: 0;
     @include mq("lg") {
-        padding-left: 0.25rem;
-        top: 2rem;
+        // padding-left: 0.25rem;
+        top: 2.75rem;
+        margin-left: -0.25rem;
     }
 }
 .price__wrapper{
@@ -54,13 +66,13 @@
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-around;
-        padding: 5rem 0 2.5rem;
+        padding: 4.875rem 0 2.5rem;
         margin-top: 2.5rem;
     }
     @include mq("lg") {
-        justify-content: center;
+        justify-content: space-between;
         margin: 0 auto;
-        max-width: 1077px;
+        max-width: 1080px;
     }
 }
 .price__contents{
@@ -71,9 +83,10 @@
     width: 45%;
     }
     @include mq("lg") {
+        width: 46%;
         padding-top: 0;
         max-width: 492px;
-        margin-left: 2.8125rem;
+        // margin-left: 2.8125rem;
     }
 }
 .info-colorbox img {
@@ -89,6 +102,7 @@
     width: auto;
     margin-left: 3rem;
     max-width: 492px;
+    margin-top: 0.25rem;
     }
 }
 .price__table {
@@ -132,22 +146,62 @@
     &::before {
     content: "";
     display: block;
-    height: 2.5rem;
+    height: 1.9875rem;
   }
 }
 .price__illust{
     @include mq("lg") {
         position: absolute;
         left: 6.25rem;
-        bottom: 3.75rem;
+        bottom: 4rem;
         background-image: url('../../images/common/green-fishes.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        width: min(27.3125rem, 27%);
+        width: max(27.3125rem, 27%);
         aspect-ratio: 437/ 201;
         margin-top: 1.5rem;
         z-index: 10;
     }
 }
-
+.price__table tr{
+    display: flex;
+}
+.price__table th{
+    padding: 0.5rem 0 0.125rem 0;
+    vertical-align: middle;
+}
+.price__table  .license-price {
+    width: 7rem;
+    padding: 0.45rem 0 0.125rem 0rem;
+    font-size: 1rem;
+    text-align: right;
+    @include mq("lg") {
+        display: inline-block;
+        margin-right: 0.125rem;
+        transform: scale(1);
+    }
+}
+.price__table .license-content{
+    flex:1;
+    min-width: 0;
+}
+.license-prices  .license-price{
+    padding: 0.35rem 0 0.125rem 0rem;
+}
+.license-prices-ex  .license-price{
+    padding: 0.25rem 0 0.125rem 0rem;
+}
+.license-prices-beach  .license-price{
+    padding: 0.25rem 0 0.125rem 0rem;
+}
+.license-prices-beach .license-prices-ex{
+    display: inline-block;
+    padding: 0 0 0 0;
+}
+.common__btn.price__btn{
+    @include mq("lg") {
+        margin: 2.75rem auto 0 -0.125rem;
+        padding: 0.875rem 2.45rem;
+    }
+}

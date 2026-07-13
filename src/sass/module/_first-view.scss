@@ -5,14 +5,14 @@
     @include mq("md") {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity transition-delay 2.8s ease-in;
+        transition: opacity transition-delay 4.3s ease-in;
         height: 100%;
     }
 }
 .first-view.is-visible {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.6s;
+  transition-delay: 1.6s;
 }
 
 .view__swiper{
@@ -25,9 +25,9 @@
     position: absolute;
     z-index: 2;
     top: 40%;
-    left: 50%;
+    left: 49.975%;
     transform: translateY(-40%);
-    transform: translateX(-50%);
+    transform: translateX(-50.5%);
     width: 100%;
     max-width: 248px;
     @include mq("lg") {
@@ -41,10 +41,12 @@
     text-align: center;
     font-size: 2.5rem;
     width: 100%;
+    font-weight: $normal;
     letter-spacing: 0.54em;
     transition: 2s ease-in;
     @include mq("lg") {
         font-size: 5rem;
+        letter-spacing: 0.53em;
     }
 }
 .diving-title__sub{

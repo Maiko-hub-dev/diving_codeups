@@ -7,13 +7,21 @@
     padding: 2.5rem 0.9375rem 0;
     margin-top: 2.5rem;
     @include mq("lg") {
-        padding: 2.5em 5em;
+        padding: 2.35em 4em;
         margin-top: 2rem;
+    }
+    @include mq("xl") {
+        padding: 2.35em 5em;
     }
 }
 .campaign__container{
     @include mq("lg") {
         margin-top: 1rem;
+        padding: 0 clamp(0.65rem, 0.75vw, 1.25rem);
+    }
+}.campaign__wrapper{
+    @include mq("xl") {
+        padding: 0 5em;
     }
 }
 .campaign__head {
@@ -22,6 +30,12 @@
   align-items: flex-end;
   position: relative;
 }
+.campaign__title.common-title{
+    @include mq("lg") {
+        padding-left: 0;
+        transform: translateX(-50.75%);
+    }
+}
 .campaign__navigation {
   display: none;
   @include mq("lg") {
@@ -29,8 +43,8 @@
     gap: 1rem;
     align-items: center;
     min-width: 240px;
-    margin-top: 2.125rem;
-    margin-right: 6rem;
+    margin-top: 2.106875rem;
+    margin-right: clamp(0.85rem, 0.5vw, 1rem);
   }
 }
 
@@ -56,7 +70,7 @@
 .campaign-button-next::before {
   content: "";
   position: absolute;
-  top: 54%;
+  top: 52%;
   left: 50%;
   width: 2rem;
   height: 1px;
@@ -67,7 +81,7 @@
 .campaign-button-next::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 47.5%;
   right: 38%;
   width: 0.5rem;
   height: 1rem;
@@ -78,7 +92,7 @@
 .campaign-button-prev::before {
   content: "";
   position: absolute;
-  top: 54%;
+  top: 52%;
   left: 50%;
   width: 2rem;
   height: 1px;
@@ -88,8 +102,8 @@
 .campaign-button-prev::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 38%;
+  top: 47.5%;
+  left: 41%;
   width: 0.5rem;
   height: 1rem;
   border-top: 1px solid $green;
@@ -100,11 +114,14 @@
     position: relative;
     margin-top: 0.75rem;
     @include mq("md") {
-        margin-top: 1.65rem;
+        margin-top: 1.5rem;
     }
 }
 .contents__inner.swiper2 {
     padding: 2rem 0;
+    @include mq("lg") {
+        padding: 0;
+    }
 }
 
 .slide__block{
@@ -158,13 +175,13 @@
         font-size: 1rem;
         width: 100%;
         text-align: left;
-        padding: 0 1rem 0 3.65rem;
+        padding: 0.5rem 1rem 0 3.5rem;
     }
 }
 .slide__plices{
     @include mq("lg") {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 2rem;
     }
 }
@@ -199,6 +216,12 @@
 }
 .campaign__btn.common__btn {
     @include mq("lg") {
-        margin-top: 5.45rem;
+        margin-top: 4.5rem;
+        padding: 0.875rem 2.25rem;
+    }
+}
+.campaign__viewmore.common__btn-wrap{
+    @include mq("lg") {
+        width: 12.725rem;
     }
 }

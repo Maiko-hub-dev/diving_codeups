@@ -8,14 +8,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   window.addEventListener("load", () => {
   const loading = document.querySelector(".js-loading");
   const firstView = document.querySelector(".first-view");
-  const headerOn =  document.querySelector(".header");
 
   setTimeout(() => {
     loading.classList.add("is-hidden");
     firstView.classList.add("is-visible");
-    headerOn.classList.add("is-visible");
-
   }, 1500);
+    document.body.classList.add("is-loaded");
 
   let imgHeight = $('.js-first-view').outerHeight();
   let topBtn = $('.pagetop');
@@ -198,6 +196,7 @@ window.addEventListener("load", async () =>{
   const splash = document.querySelector(".c-loading");
   const logo = document.querySelector("#splash_logo");
   const firstView = document.querySelector(".first-view");
+  // const spNav = document.querySelector(".sp-nav");
   // ① ロゴ表示時間
   await wait(2500);
 
@@ -217,6 +216,8 @@ window.addEventListener("load", async () =>{
 
   // ④ メインビュー表示
   firstView.classList.add("is-visible");
+  // header表示
+
 });
 
 //. ここまで

@@ -42,11 +42,11 @@
     }
 }
 .c-loading.is-slide .c-loading__item--left::before {
-  animation: slideInTop 2.5s ease-out forwards;
+  animation: slideInTop 1.5s ease-out forwards;
 }
 
 .c-loading.is-slide .c-loading__item--right::before {
-  animation: slideInBottom 3.5s ease-out forwards;
+  animation: slideInBottom 2.5s ease-out forwards;
 }
 .c-loading.is-hidden{
   opacity: 0;

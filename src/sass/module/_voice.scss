@@ -7,14 +7,14 @@
     padding: 0 1rem 0 0.875rem;
     margin-top: 5rem;
     @include mq("lg") {
-    padding: 2.5em 1.25rem 3.125rem;
-    margin-top: 5rem;
+    padding: 2rem 1.25rem 3.125rem;
+    margin-top: 0rem;
     }
 }
 .voice__container {
     padding: 0 1.3125rem;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 .voice__subtitle{
     font-family: $base-font-family;
@@ -28,8 +28,9 @@
     transform: translateX(-50%);
     top: 0;
     @include mq("lg") {
-        padding-left: 0.25rem;
-        top: 2rem;
+        // padding-left: 0.25rem;
+        top: 1.75rem;
+        margin-top: 0.25rem;
     }
 }
 .voice__titles{
@@ -54,7 +55,7 @@
     @include mq("lg") {
         font-size: 2.5rem;
         top: 1.75rem;
-        padding-left: 0.25rem;
+        padding-right: 0.5rem;
     }
 }
 
@@ -71,7 +72,7 @@
     }
     @include mq("lg") {
         margin-top: 0 auto;
-        padding-top: 5rem;
+        padding-top: 1rem;
         min-width: 1080px;
     }
 }
@@ -85,6 +86,7 @@
     }
     @include mq("lg") {
         width: 520px;
+        padding: 1.5rem 1.5rem 1.25rem 1rem;
     }
 }
 .voice__card:not(:first-child){
@@ -102,7 +104,8 @@
         padding: 0 clamp(0.25rem, 0.5vw, 1rem);
     }
     @include mq("lg") {
-        padding: 0;
+        justify-content: space-between;
+        padding: 0 0 0 0.5rem;
     }
 }
 .voice__card-date{
@@ -119,7 +122,7 @@
     flex-direction: column;
     justify-content: space-around;
     @include mq("lg") {
-        width: 47.6%;
+        padding: 0;
     }
 }
 .voice__card-heading{
@@ -131,21 +134,34 @@
         flex-direction: row;
         align-items: center;
         padding-bottom: 0.5rem;
+        padding-top: 1.5rem;
+    }
+    @include mq("lg") {
+        padding-top: 1.5rem;
     }
 }
 .voice__card-age{
     font-size: 0.75rem;
+    font-family: $base-font-family;
     color: $font-bk;
+    font-weight: $regular;
+    line-height: 1.25;
     width: fit-content;
+    @include mq("lg") {
+        padding-top: 1.25rem;
+    }
 }
 .voice__card-title{
     font-family: $base-font-family;
     font-weight: $medium;
     @include mq("md") {
         font-size: clamp(0.75rem, 0.75vw, 1rem);
+        letter-spacing: normal;
     }
     @include mq("lg") {
-        font-size: clamp(1em, 1vw, 2rem);
+        font-size: clamp(1.5em, 1vw, 2rem);
+        padding-right: 0.25rem;
+        padding-bottom: 0.125rem;
     }
 }
 .voice__card--image{
@@ -158,21 +174,23 @@
     //     width: min(38.24%, 120px);
     // }
     @include mq("lg") {
-        width: 48.24%;
-        margin: 0 auto;
+        // width: max(43.24%,11.25rem);
+        width: 45%;
+        min-width: 11.25rem;
+        margin: 0 0 0 1.25rem;
     }
 }
-.voice__card--line{
-    border: none;
-    border: 1px solid $green;
-    line-height: 1;
-}
+
 .voice__card--txt{
     color: $font-bk;
     line-height: 1.5;
     padding: 1rem 0 0 0;
     @include mq("md") {
-        padding: 2.5rem 0;
+    padding: 2.5rem 0 0.5rem;
+    }
+    @include mq("lg") {
+    padding: 2.5rem 0.5rem 0.25rem;
+    letter-spacing: normal;
     }
 }
 .voice__active-content{
@@ -189,13 +207,19 @@
         margin-top: 1rem;
     }
     @include mq("lg") {
+        padding: 0.25rem 1rem;
         margin-top: 0;
         width: 7.25rem;
     }
 }
 .voice__btn.common__btn{
+    transition: transform .5s ease;
+    cursor: pointer;
     @include mq("md") {
-        margin-top: 5rem;
+    margin-top: 5rem;
+    }
+    @include mq("lg") {
+    padding: 0.875rem 2.25rem;
     }
 }
 .voice__illust{
@@ -206,10 +230,18 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    bottom: -5rem;
-    right: 11.25rem;
+    bottom: -4.5rem;
+    right: 10.25rem;
     z-index: 2;
     aspect-ratio: (71 / 162);
     }
     
 }
+// .voice__btn-wrap.common__btn-wrap{
+//     transition: transform .5s ease;
+//     cursor: pointer;
+//     @include mq("lg") {
+//         width: 12.725rem;
+//     }
+// }
+

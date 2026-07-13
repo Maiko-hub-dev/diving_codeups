@@ -3,3 +3,7 @@
 @use "./module/index";
 @use "./page";
 @use "./global" as *;
+
+body.is-loaded .sp-nav {
+  opacity: 1;
+}

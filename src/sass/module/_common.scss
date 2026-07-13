@@ -35,7 +35,8 @@
         aspect-ratio: (72 / 16);
     }
     @include mq("lg") {
-        padding-left: 0.25rem;
+        padding-left: 0;
+        transform: translateX(-53%);
         top: 5rem;
     }
 }
@@ -50,8 +51,9 @@
     left: 50%;
     transform: translateX(-50%);
     @include mq("lg") {
-        padding-left: 0.25rem;
-        top: 5rem;
+        padding-left: 0;
+        margin-left: -0.25rem;
+        top: 1.75rem;
     }
 }
 .common__btn--txt{
@@ -69,6 +71,7 @@
     line-height: 1.571;
     font-weight: $regular;
 }
+
 .common__btn-wrap {
   position: relative;
   width: 12.625rem;
@@ -82,6 +85,7 @@
     width: inherit;
     height: 100%;
     border: 1px solid $green;
+    pointer-events: none;
     &:hover{
         border-top: transparent;
         border-left: transparent

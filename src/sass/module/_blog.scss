@@ -28,10 +28,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        width: min(27.3125rem, 30%);
+        width: min(27.3125rem, 32%);
         aspect-ratio: (437/ 201);
-        margin-top: 1.5rem;
-        margin-left: 6.26rem;
+        margin-top: 1.65rem;
+        margin-left: 6.35rem;
     }
 }
 .blog__fishes-illust{
@@ -41,10 +41,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: min(18.8125rem, 30%);
+    width: min(18.5rem, 32%);
     aspect-ratio: (437/ 201);
     margin-top: 1.5rem;
-    margin-left: 6.26rem;
+    margin-left: 5.25rem;
 }
 }
 .blog__container {
@@ -82,8 +82,8 @@
     }
     @include mq("lg") {
         font-size: 2.5rem;
-        top: 1.75rem;
-        padding-left: 0.25rem;
+        top: 1rem;
+        padding-left: 0;
     }
 }
 .blog__title::first-letter {
@@ -106,8 +106,9 @@
         color: $white;
     }
     @include mq("lg") {
-        padding-left: 0.25rem;
-        top: 2rem;
+        padding-left: 0;
+        margin-left: -0.25rem;
+        top: 1rem;
     }
 }
 
@@ -123,7 +124,7 @@
         justify-content: center;
     }
     @include mq("lg") {
-        margin-top: 0 auto;
+        margin: 1rem auto 0 -0.25rem;
         padding-top: 5rem;
     }
 }
@@ -133,11 +134,10 @@
     background-color: $white;
     width: 100%;
     @include mq("md") {
-        
         width: 333px;
     }
     @include mq("lg") {
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem;
     }
 }
 .blog__card:not(:first-child){
@@ -151,6 +151,9 @@
 }
 .blog__card--contents{
     padding: 1.5rem 0 1.0625rem;
+    @include mq("lg") {
+     padding: 1.125rem 0 1.45rem;
+    }
 }
 .blog__card-date{
     color: $font-bk;
@@ -161,6 +164,9 @@
 .blog__card--titles{
     border-bottom: 1px solid $green;
     padding: 0 0 0.25rem 0;
+    @include mq("lg") {
+     padding: 0 0 0.25rem 0;
+    }
 }
 .blog__card-title{
     font-family: $base-font-family;
@@ -175,9 +181,25 @@
     color: $font-bk;
     line-height: 1.5;
     padding: 1rem 0 0 0;
+    @include mq("lg") {
+     padding: 1rem 0 0 0;
+     letter-spacing: 0.01rem;
+    }
 }
 .common__btn.blog__btn{
     @include mq("lg") {
-        margin-top: 5rem;
+        margin: 5rem auto 0 -0.125rem;
+        padding: 0.875rem 2.45rem;
+    }
+}
+.blog__btn-wrap.common__btn-wrap{
+    @include mq("lg") {
+        width: 12.725rem;
+        margin: 0 auto;
+    }
+}
+.common__btn-wrap.blog__btn-wrap::before{
+    @include mq("lg") {
+        left:1px;
     }
 }
