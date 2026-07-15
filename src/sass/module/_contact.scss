@@ -5,10 +5,11 @@
     position: relative;
     z-index: 0;
 }
+
 .contact__inner{
     padding: 5rem 5rem 6.25rem; 
     @include mq("lg") {
-        padding: 8.75rem 5.25rem;
+        padding: 8.75rem clamp(2.25rem, 4%, 5rem);
     }
 }
 .contact__container{
@@ -25,9 +26,9 @@
     @include mq("lg") {
         flex-direction: row;
         align-items: center;
-        min-width: 1080px;
+        max-width: $inner;
         padding: 4rem 0 5rem;
-        
+        min-width: 0;
     }
 }
 .contact__titles{

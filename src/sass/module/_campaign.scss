@@ -2,6 +2,7 @@
 
 .campaign{
     width: 100%;
+    overflow: hidden;
 }
 .campaign__inner{
     padding: 2.5rem 0.9375rem 0;
@@ -112,13 +113,15 @@
 }
 .campaign__contents{
     position: relative;
-    margin-top: 0.75rem;
+    // margin-top: 0.75rem;
+    margin-top: 1.125rem;
+    padding: 0 0 0.5rem 0;
     @include mq("md") {
         margin-top: 1.5rem;
     }
 }
 .contents__inner.swiper2 {
-    padding: 2rem 0;
+    padding: 2rem 0 1.5rem ;
     @include mq("lg") {
         padding: 0;
     }
@@ -132,7 +135,7 @@
     }
 }
 .slide__container{
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
     @include mq("lg") {
     padding-top: 0.65rem;
     }
@@ -178,10 +181,12 @@
         padding: 0.5rem 1rem 0 3.5rem;
     }
 }
-.slide__plices{
-    @include mq("lg") {
+.slide__prices{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0.225rem 0.5rem 0;
+    @include mq("lg") {
     padding: 0 2rem;
     }
 }
@@ -191,6 +196,8 @@
     text-decoration-thickness: 3px;
     font-family: $lato-font;
     font-size: 1.25rem;
+    letter-spacing: 0.04em;
+    padding-bottom: 0.25rem;
     font-weight: $bold;
     @include mq("lg") {
         padding-left: 1.25rem;
@@ -215,9 +222,10 @@
     box-shadow: 2px 2px 8px rgba($black, 0.25);
 }
 .campaign__btn.common__btn {
+    margin-top: 0rem;
+    padding: 0.875rem 2.25rem;
     @include mq("lg") {
         margin-top: 4.5rem;
-        padding: 0.875rem 2.25rem;
     }
 }
 .campaign__viewmore.common__btn-wrap{

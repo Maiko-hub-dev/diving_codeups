@@ -144,6 +144,10 @@
     border-right: solid 1px;
     transform: skew(45deg);
     color: $white;
+    margin-left: 0.25rem;
+    @include mq("lg") {
+        margin-left: 0;
+    }
 }
 .common__btn:hover .common__btn--arrow::after{
     color: $green;

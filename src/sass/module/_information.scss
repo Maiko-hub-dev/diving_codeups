@@ -2,7 +2,7 @@
 
 .information{
     width: 100%;
-    margin-top: 4.375rem;
+    margin-top: 1.265rem;
     @include mq("lg") {
         margin-top: 5.65rem;
       
@@ -25,7 +25,13 @@
     }
 }
 .information__titles{
+    width: 17.5625rem;
+    margin: 0 auto;
+    border: 1px solid $green;
+    padding: 0 0 0.25rem 0;
     @include mq("lg") {
+        border: none;
+        width: 100%;
         padding: 0 0.5rem;
     }
 }
@@ -36,17 +42,17 @@
     line-height: 1.5;
     text-align: center;
     margin-top: 0.25em;
-    padding-left: 0.25rem;
     position: relative;
-
+    
     @include mq("lg") {
+        padding-left: 0.25rem;
         top: 2rem;
         margin-top: 0;
         margin-left: -1rem;
 }
 }
 .information__licence{
-    margin-top: 1.5rem;
+    margin-top: 1.35rem;
     @include mq("lg") {
         margin-top: 2.125rem;
         // padding-left: 1rem;
@@ -87,7 +93,7 @@
 }
 .information__colorbox{
     display: block;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     @include mq("lg") {
         margin-top: 2.35rem;
         width: 50%;
@@ -130,11 +136,12 @@
     font-weight: $bold;
     border-bottom: 1px solid $green;
     padding-bottom: 0.125rem;
-    padding: 0 0 0.125rem 0.125rem;
+    padding: 0 0 0.25rem 0;
     text-shadow: 1px 1px 1px $font-bk;
     @include mq("lg") {
     font-size: 1.5rem;
     text-shadow: none;
+    padding: 0 0 0.125rem 0.125rem;
     // -webkit-text-stroke-color: none;
     // -webkit-text-stroke-width: 0;
     }
@@ -144,6 +151,8 @@
     font-family: $base-font-family;
     line-height: 1.5;
     text-shadow: 1px 1px 1px $green;
+    margin: 0;
+    font-size: 1rem;
     @include mq("lg") {
     font-size: 1rem;
     letter-spacing: 0.01em;

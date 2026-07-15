@@ -1,56 +1,40 @@
 @use "../global" as *;
 
 .pagetop {
-    position: fixed;
-    width: 5rem;
-    height: 5rem;
-    border: 1px solid $green;
-    right: 0.9375rem;
-    border-radius: 50%;
-    cursor: pointer;
-    bottom: 19.5rem;
-    background-color: $white;
-    transition: 0.3s background-color;
-    @include mq("lg") {
-    bottom: min(39.9375rem, 7%);
-    }
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
+  z-index: 100;
 }
 .pagetop a {
+    position: relative;
     display: block;
-}
-.pagetop:hover{
-    background-color: $green;
-}
-.pagetop:hover{
-    border: 1px solid $white;
-}
-.pagetop::before {
-  content: "";
-  position: absolute;
-  top: 54%;
-  left: 50%;
-  width: 2.35rem;
-  height: 1px;
-  background: $green;
-  transform: translate(-50%) rotate(-90deg);
-}
-.pagetop:hover::before{
+    width: 5rem;
+    aspect-ratio: 1;
+    border: 1px solid $green;
+    border-radius: 50%;
     background: $white;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
 }
-
-.pagetop::after {
-  content: "";
-  position: absolute;
-  top: 40%;
-  left: 57.5%;
-  width: 1px;
-  height: 1.25rem;
-  border-top: 1px solid $green;
-  border-left: 1px solid $green;
-  transform: translate(-50%, -50%) rotate(-45deg) scale(0.7);
+.pagetop a::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:1px;
+    height:2.25rem;
+    background:$green;
+    transform:translate(-50%,-50%);
+    box-shadow: 0 1px 3px rgba($font-bk, 0.3);
 }
-.pagetop:hover::after{
-    background: $white;
-    border-top: 1px solid $white;
-    border-left: 1px solid $white;
+.pagetop a::after{
+    content:"";
+    position:absolute;
+    left: 43.65%;
+    top: 50%;
+    width: 2.875rem;
+    height: 0.5rem;
+    border-top:1px solid $green;
+    border-left:1px solid $green;
+    transform: translate(-50%, -50%) skew(316deg) rotate(46deg);
 }

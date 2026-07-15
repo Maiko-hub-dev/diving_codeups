@@ -5,7 +5,7 @@
 }
 .aboutus__inner {
     padding: 0 1rem 0 0.875rem;
-    margin-top: 5rem;
+    margin-top: 4.75rem;
     @include mq("lg") {
     padding: 0 1.25rem 3.125rem;
     margin-top: 4.5rem;
@@ -37,6 +37,10 @@
 }
 .aboutus__title.common-title{
     position: relative;
+    padding: 0 0.25rem;
+    font-size: 2rem;
+    font-weight: $regular;
+    letter-spacing: 0.025em;
     @include mq("lg") {
         text-align: center;
         left: 46.5%;
@@ -64,7 +68,7 @@
 .aboutus__framework{
     display: flex;
     position: relative;
-    margin-top: 1.75rem;
+    margin-top: 0.25rem;
     z-index: 1;
     width: 100%;
     aspect-ratio: 345 / 212; // Figmaの画像全体の比率
@@ -78,11 +82,10 @@
     top: 0;
     left: 0;
     display: block;
-    width: 35%;
     z-index: 3;
+    width: 37%;
     object-fit: cover;
     @include mq("md") {
-        width: 37%;
         max-width: 400px;
     }
     @include mq("lg") {
@@ -94,7 +97,7 @@
     display: block;
     position: absolute;
     right: 0;
-    padding-top: 1.75rem;
+    padding-top: 1.65rem;
     width: min(81%);
     object-fit: cover;
     @include mq("md") {
@@ -166,6 +169,7 @@
     color: $green;
     font-family: $eng-fonts;
     font-size: 2.5rem;
+    line-height: 1;
     @include mq("md") {
         font-size: clamp(2rem, 5vw, 4rem);
         color: $white;
@@ -186,24 +190,48 @@
     }
 }
 .aboutus__viewmore.common__btn-wrap{
+    position: relative;
+    left: 45%;
+    top: 100%;
+    transform: translate(-45%, -100%);
+    margin: 5rem 0 0 0;
+    @include mq("md") {
+    left: 0;
+    top: 100%;
+    transform: translate( 0, -100%);
+    }
     @include mq("lg") {
+        top: initial;
+        left: initial;
+        transform: translate(0,0);
         width: 12.725rem;
     }
 }
 .aboutus__btn.common__btn {
+    margin-top: 1.65rem;
+    padding: 0.875rem 2rem 0.875rem 2rem;
     @include mq("lg") {
         margin-top: 2.5rem;
-        padding: 0.875rem 2.25rem;
     }
 }
-
+.aboutus__btn.common__btn::before{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 4px;
+    left: 4px;
+    width: inherit;
+    height: 100%;
+    border: 1px solid #408F95;
+    pointer-events: none;
+}
 .aboutus__messages{
     margin-top: 1rem;
+    position: relative;
     @include mq("md") {
     max-width: 280px;
     margin-left: 1rem;
     margin-top: 0;
-    transform: translateX(10px);
     }
 @include mq("lg") {
     margin-left: 0;
@@ -212,35 +240,13 @@
     margin-left: 2.5rem;
     }
 }
-// .aboutus__message-text{
-//     color: $green;
-//     font-family: $eng-fonts;
-//     font-size: 2.5rem;
-//     @include mq("md") {
-//     width: 100%;
-//     display: inline-block;
-//     max-width: 360px;
-//     font-size: clamp(2rem, 5vw, 4rem);
-//     color: $white;
-//     transform: translateX(20px);
-//     font-weight: $regular;
-//     line-height: 1.25;
-//     }
-//     @include mq("lg") {
-//     min-width: 360px;
-//     max-width: initial;
-//     font-size: clamp(3rem, 5vw, 5rem);
-//     letter-spacing: 0.06em;
-//     margin-top: -0.5rem;
-//     line-height: 1.5;
-//     }
-// }
+
 .aboutus__message--txt{
     color: $font-bk;
     font-family: $base-font-family;
     font-size: 1rem;
     line-height: 1.5;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.005em;
     font-weight: $regular;
     @include mq("md") {
         color: $white;

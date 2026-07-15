@@ -73,7 +73,8 @@
     @include mq("lg") {
         margin-top: 0 auto;
         padding-top: 1rem;
-        min-width: 1080px;
+        min-width: 0;
+        max-width: 4INNER;
     }
 }
 .voice__card{

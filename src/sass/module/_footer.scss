@@ -115,6 +115,19 @@
 .footer__inner-content{
     padding: 0rem 0.9375rem;
     margin: 1.5rem 0 0 0.25rem;
+    @include mq("lg") {
+    margin: 1.125rem 0 0 0.25rem;
+    }
+}
+.footer__inner-content.footer__inner-content--license{
+    @include mq("lg") {
+    margin: 1.068755rem 0 0.125rem 0.35rem;
+    }
+}
+.footer__inner-content.footer__inner-content--license2{
+    @include mq("lg") {
+    margin: 1.15rem 0 0.125rem 0.35rem;
+    }
 }
 .footer__items{
     padding: 0;
@@ -157,6 +170,19 @@
 .footer__item.footer__head-content
 {
     margin-top: 2.5rem;
+    @include mq("lg") {
+        margin-top: 1.25rem;
+    }
+}
+.footer__item.footer__head.footer__star{
+    @include mq("lg") {
+        margin-top: 2rem;
+    }
+}
+.footer__item.footer__head.footer__star-law{
+    @include mq("lg") {
+        margin-top: 2.25rem;
+    }
 }
 .footer__link.footer__link-title{
     position: relative;
@@ -165,11 +191,17 @@
 }
 .footer__item.footer__head-content{
     padding: 0 0 0 1.375rem;
+    @include mq("md") {
+    font-weight: $regular;
+    }
 }
 .footer__copyrights{
     margin: 2.5rem auto 0;
     width: 100%;
     padding: 0 0.875rem;
+    @include mq("lg") {
+        padding: 0 0.5rem;
+    }
 }
 .footer__copyright-txt{
     color: $white;
@@ -187,6 +219,13 @@
         font-size: 0.875rem;
         line-height: 1.28;
     }
+    @include mq("lg") {
+        width: fit-content;
+        margin: 0 auto 0 auto;
+        padding: 0 0.25rem 0 0;
+        font-size: 0.875rem;
+        text-justify: auto;
+    }
 }
 .footer__sub{
     display: inline-block;
@@ -194,5 +233,8 @@
     font-weight: $regular;
     @include mq("md") {
         letter-spacing: 0.07em;
+    }
+    @include mq("lg") {
+        letter-spacing: normal;
     }
 }
