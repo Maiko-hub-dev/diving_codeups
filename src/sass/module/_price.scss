@@ -2,7 +2,7 @@
 
 .price {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 5.25rem;
     @include mq("lg") {
     margin-top: 5.75rem;
     }
@@ -14,7 +14,7 @@
 }
 .price__container{
     background-color: $light-green;
-    padding: 5rem 0.9375rem;
+    padding: 5rem 0.9375rem 5.375rem;
     @include mq("sm") {
     padding: 5rem 1.5rem 3.5rem;
     }
@@ -60,7 +60,7 @@
 .price__wrapper{
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 1.5rem;
+    margin-top: 1.65rem;
     @include mq("md") {
         position: relative;
         flex-direction: row;
@@ -77,7 +77,7 @@
 }
 .price__contents{
     width: 100%;
-    padding-top: 2rem;
+    padding-top: 2.15rem;
     @include mq("md") {
     padding-top: 0;
     width: 45%;
@@ -109,19 +109,25 @@
   width: 100%;
   border-collapse: collapse;
 
-  th,
-  td {
-    padding: 0.5rem 0 0 0;
-    vertical-align: middle;
+  th{
+    @include mq("md") {
+        padding: 0.5rem 0 0 0;
+        vertical-align: middle;
+    }
   }
 
   .license-title {
-    width: 100%;
-    color: $font-bk;
-    line-height: 1.5;
-    font-weight: $bold;
-    text-align: left;
-    border-bottom: 1px solid $green;
+    font-weight: $medium;
+    padding: 0.5rem 0 0 0;
+    @include mq("md") {
+        width: 100%;
+        color: $font-bk;
+        line-height: 1.5;
+        font-weight: $bold;
+        text-align: left;
+        border-bottom: 1px solid $green;
+        
+    }
   }
 
   .license-content {
@@ -133,13 +139,17 @@
   }
 
   .license-price {
+    font-size: 0.875rem;
     width: 100%;
     text-align: right;
     white-space: nowrap;
-        font-family: $base-font-family;
+    font-family: $base-font-family;
     color: $font-bk;
     line-height: 1.5;
     font-weight: $regular;
+    @include mq("lg") {
+        font-size: 1rem;
+    }
   }
 }
 .licence__experience{
@@ -174,32 +184,84 @@
 .price__table  .license-price {
     width: 7rem;
     padding: 0.45rem 0 0.125rem 0rem;
-    font-size: 1rem;
     text-align: right;
     @include mq("lg") {
         display: inline-block;
+        font-size: 1rem;
         margin-right: 0.125rem;
         transform: scale(1);
     }
 }
 .price__table .license-content{
-    flex:1;
     min-width: 0;
+    padding: 0.75rem 0 0 0;
+    font-size: 0.875rem;
+    @include mq("md") {
+    padding: 0.5rem 0 0 0;
+    vertical-align: middle;
+    font-size: 1rem;
+    flex:1;
+    }
+
+}
+.price__table .price__table-tr{
+    padding: 0.25rem 0 0 0;
+    @include mq("md") {
+    padding: 0.5rem 0 0 0;
+    }
+}
+ .license-content.license-content-next{
+    padding: 0.5rem 0 0 0;
+    font-size: 0.875rem;
+    @include mq("md") {
+    padding: 0.5rem 0 0 0;
+    vertical-align: middle;
+    font-size: 1rem;
+    }
 }
 .license-prices  .license-price{
+    padding: 0.75rem 0 0.125rem 0rem;
+    @include mq("lg") {
     padding: 0.35rem 0 0.125rem 0rem;
+    }
+}
+ .licence__experience  .license-price{
+    padding: 0.75rem 0 0.125rem 0rem;
+    @include mq("lg") {
+    padding: 0.35rem 0 0.125rem 0rem;
+    }
 }
 .license-prices-ex  .license-price{
+    padding: 0.5rem 0 0.125rem 0rem;
+    @include mq("md") {
     padding: 0.25rem 0 0.125rem 0rem;
+    }
 }
 .license-prices-beach  .license-price{
-    padding: 0.25rem 0 0.125rem 0rem;
+     padding: 0.75rem 0 0.125rem 0rem;
+    @include mq("lg") {
+        padding: 0.25rem 0 0.125rem 0rem;
+    }
 }
 .license-prices-beach .license-prices-ex{
     display: inline-block;
     padding: 0 0 0 0;
 }
+.license-prices-ex  .license-content{
+    padding: 0.5rem 0 0.125rem 0rem;
+    @include mq("lg") {
+    padding: 0.45rem 0 0.125rem 0rem;
+    }
+}
+.license-prices-ex.license-prices-ex2{
+    padding-top: 0;
+    @include mq("md") {
+        padding: 0;
+    }
+}
 .common__btn.price__btn{
+    margin-top: 2.375rem;
+    padding: 0.75rem 2.25rem;
     @include mq("lg") {
         margin: 2.75rem auto 0 -0.125rem;
         padding: 0.875rem 2.45rem;

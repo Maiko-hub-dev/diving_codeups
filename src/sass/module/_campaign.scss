@@ -144,12 +144,16 @@
     display: inline-block;
     color: $green;
     border: $green solid 1px;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem;
     line-height: 1.8333;
     font-size: 0.75rem;
     font-family: $base-font-family;
     width: 6.75rem;
+    text-align: center;
     white-space: nowrap;
+    @include mq("md") {
+        padding: 0.25rem 0.75rem;
+    }
     @include mq("lg") {
         width: 7.25rem;
         padding: 0.35rem 0.75rem 0.25rem;

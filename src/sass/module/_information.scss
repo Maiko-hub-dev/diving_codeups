@@ -153,13 +153,17 @@
     text-shadow: 1px 1px 1px $green;
     margin: 0;
     font-size: 1rem;
+    padding: 0.5rem 0;
     @include mq("lg") {
     font-size: 1rem;
     letter-spacing: 0.01em;
+    padding: 0;
     font-weight: $regular;
     margin: 0.5rem 0;
     text-shadow: none;
     padding: 0 0.25rem;
+}
+@include mq("xl") {
     min-width: 492px;
     }
 }
@@ -168,4 +172,11 @@
         width: 12.725rem;
         // transform: translateX(-0.5rem);
 }
+}
+.information__btn.common__btn{
+    margin-top: 2rem;
+    padding: 0.875rem 2.25rem;
+    @include mq("lg") {
+        margin-top: 0;
+    }
 }

@@ -2,12 +2,9 @@
 
 .header {
   width: 100%;
-
   transition: background-color 0.3s ease;
-
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
   transition: 2.8s ease;
 }
 
@@ -22,17 +19,19 @@ body.is-loaded .header{
   right: 0;
   z-index: 9999;
   padding: 1.3125rem 0.9375rem;
+  transform: translateY(20px);
   background-color: rgba($skelton, 0.68);
   visibility: visible;
   opacity: 1;
    @include mq("lg") {
     height: 5.625em;
-    transform: translateY(0);
-    padding: 0.5rem 2.5rem;
     top: 0;
+    padding: 0.5rem 2.5rem;
+    transform: translateY(0);
     justify-content: flex-start;
   }
 }
+
 .header:has(.js-drawer.active) {
   background-color: $green;
 }
@@ -54,11 +53,11 @@ body.is-loaded .header{
   display: none;
   @include mq("md") {
     padding: 0;
-  }
-  @include mq("lg") {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  @include mq("lg") {
     height: inherit;
     max-width: 100%;
     // min-width: 707px;
@@ -72,14 +71,15 @@ body.is-loaded .header{
 .header__btns {
   position: fixed;
   display: flex;
-  right: 0.9375rem;
+  right: 0;
+  // right: 0.9375rem;
   align-items: center;
   justify-content: center;
   width: 3.5rem;
   height: 3rem;
   padding: 0.4375rem 0;
   z-index: 9999;
-  @include mq("md") {
+  @include mq("lg") {
     display: none;
   }
 }

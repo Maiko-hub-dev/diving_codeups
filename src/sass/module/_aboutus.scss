@@ -112,6 +112,9 @@
         aspect-ratio: (885 /584);
         // max-width: 880px;
     }
+    @include mq("xl") {
+        top: 5rem;
+    }
 }
 .framework__img {
   display: block;
@@ -131,16 +134,20 @@
         z-index: 2;
         min-width: 560px;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -25%);
-        margin-top: 1rem;
-     
+        left: 45%;
+        transform: translate(-45%, -35%);
     }
     @include mq("lg") {
+        top: 45%;
+        left: 40%;
+        transform: translate(-40%, -35%);
+        margin-top: 1rem;
+        min-width: 0;
+    }
+    @include mq("xl") {
         top: 47.75%;
-        left: 55%;
+        left: 50%;
         transform: translate(-50%, -43%);
-        min-width: initial;
     }
 }
 .aboutus__content{
@@ -150,6 +157,7 @@
         flex-direction: row;
         justify-content: flex-start;
         padding: 0;
+        justify-content: space-around;
         width: 100%;
     }
     @include mq("lg") {
@@ -177,13 +185,15 @@
         font-weight: $regular;
     }
     @include mq("lg") {
-        min-width: 360px;
+        min-width: 236px;
         font-size: clamp(3rem, 5.05vw, 5rem);
         letter-spacing: 0.05em;
         line-height: 1.25;
-        margin-left: 2.5rem;
+        padding-left: 1rem;
     }
     @include mq("xl") {
+        padding-left: 0;
+        // margin-left: 2.5rem;
         min-width: 400px;
         margin-top: -1.25rem;
         transform: translateX(0);
@@ -196,14 +206,16 @@
     transform: translate(-45%, -100%);
     margin: 5rem 0 0 0;
     @include mq("md") {
-    left: 0;
-    top: 100%;
-    transform: translate( 0, -100%);
+    left: 50%;
+    top: 0;
+    transform: translate( -50%, -100%);
     }
     @include mq("lg") {
-        top: initial;
-        left: initial;
-        transform: translate(0,0);
+    left: 50%;
+    top: initial;
+    transform: translate( -50%, 0%);
+    }
+    @include mq("xl") {
         width: 12.725rem;
     }
 }
@@ -229,16 +241,19 @@
     margin-top: 1rem;
     position: relative;
     @include mq("md") {
-    max-width: 280px;
+    max-width: 360px;
     margin-left: 1rem;
     margin-top: 0;
     }
 @include mq("lg") {
-    margin-left: 0;
+    max-width: 400px;
+    margin-left: 1.5rem;
     transform: translateX(0);
+}
+@include mq("xl") {
     min-width: 400px;
     margin-left: 2.5rem;
-    }
+}
 }
 
 .aboutus__message--txt{
@@ -251,15 +266,19 @@
     @include mq("md") {
         color: $white;
         letter-spacing: 0.04em;
+        width: 100%;
     }
     @include mq("lg") {
-        max-width: 400px;
-        inline-size: 400px;
-        line-height: 1.5;
-        margin-top: -1.5rem;
-        // padding-top: 0.25rem;
-        word-break: break-all;
-        letter-spacing: normal;
+    line-height: 1.5;
+    // margin-top: -1.5rem;
+    max-width: 360px;
+    margin-top: 2rem;
+    word-break: break-all;
+    letter-spacing: normal;
+    }
+    @include mq("xl") {
+    max-width: 400px;
+    inline-size: 400px;
     }
 }
 .aboutus__btn{
