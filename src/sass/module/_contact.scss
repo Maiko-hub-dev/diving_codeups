@@ -70,13 +70,14 @@
 }
 .contact__illust{
     position: absolute;
-    width: max(6.8125rem, 29%);
+    width: clamp(6.8125rem, 18vw, 10rem);
     background-image: url('../../images/common/contact-fish.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     right: 1rem;
     top: 3.5rem;
+    height: auto;
     aspect-ratio: (109 /50);
     @include mq("md") {
         top:initial;

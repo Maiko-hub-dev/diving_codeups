@@ -1,6 +1,6 @@
 @use "../global/" as *;
 
-$drawer-width: 32px;
+$drawer-width: 40px;
 $drawer-height: 2px;
 $drawer-color: $white;
 $drawer-width-md: 40px;
@@ -13,19 +13,12 @@ $drawer-width-md: 40px;
 
 .header__menu-btn.hamberger {
   display: block;
-//   @include mq("md") {
-//     margin-right: 2rem;
-//   }
-//   @include mq("lxg") {
-//     margin-left: 0;
-//     display: none;
-//   }
+
 }
 
 .hamberger .menu__button {
   position: absolute;
-  right: 1.125rem;
-  // right: 0;
+  right: 0.65rem;
   display: block;
   z-index: 1001;
   // margin: 0.75rem auto 0;
@@ -36,7 +29,7 @@ $drawer-width-md: 40px;
   transform: scaleY(0.5);
   transition: ease-in-out 0.5s;
   @include mq("md") {
-    width: $drawer-width-md;
+    right: 1.125rem;
   }
 }
 .menu__button:first-child{
@@ -52,9 +45,12 @@ $drawer-width-md: 40px;
   top: 1.875rem;
 }
 .header__menu-btn.active span:nth-of-type(1){
-  -webkit-transform: translateY(10px) rotate(40deg) scaleY(.7);
-  transform: translateY(10px) rotate(40deg) scaleY(.7);
+  -webkit-transform: translateY(10px) rotate(38deg) scaleY(.4);
+  transform: translateY(10px) rotate(38deg) scaleY(.4);
+  top: 0.5rem;
   @include mq("md") {
+  -webkit-transform: translateY(10px) rotate(38deg) scaleY(.7);
+  transform: translateY(10px) rotate(38deg) scaleY(.7);
     top: 0;
   }
 
@@ -63,8 +59,13 @@ $drawer-width-md: 40px;
   opacity: 0;
 }
 .header__menu-btn.active span:nth-of-type(3){
+  -webkit-transform: translateY(-10px) rotate(-38deg) scaleY(.4);
+  transform: translateY(-10px) rotate(-38deg) scaleY(.4);
+  top: 28px;
+  @include mq("md") {
   -webkit-transform: translateY(-10px) rotate(-40deg) scaleY(.7);
   transform: translateY(-10px) rotate(-40deg) scaleY(.7);
   top: 20px;
+  }
 }
 

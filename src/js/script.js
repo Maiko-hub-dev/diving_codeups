@@ -1,7 +1,7 @@
 import "../sass/style.scss";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import './jquery.inview.min.js';
+// import './jquery.inview.min.js';
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
@@ -99,10 +99,32 @@ const swiper2 = new Swiper(".swiper2", {
 
 });
 // ドロワーメニュー
+function closeDrawer() {
+  $(".js-drawer").removeClass("active");
+  $(".header").removeClass("active");
+  $(".sp-nav").removeClass("active");
+}
+
 $(".js-drawer").on("click", function () {
   $(this).toggleClass("active");
   $(".header").toggleClass("active");
   $(".sp-nav").toggleClass("active");
+});
+
+$(".sp-nav a").on("click", function () {
+  closeDrawer();
+  $(".js-hamberger").remove("active");
+});
+$(".sp-nav").on("click", function () {
+  closeDrawer();
+  $(".js-hamberger").toggleClass("active");
+});
+
+
+  // ドロワー内リンクを押したら閉じる
+  $(".sp-nav").on("click",function () {
+  closeDrawer();
+  $(".js-hamberger").remove("active");
 });
 
 //  テキストが15文字以上になった場合に「…（省略記号）」でカットされるCSS の実装
@@ -115,69 +137,145 @@ elems.forEach(el => {
 });
 //要素の取得とスピードの設定
 
- const speed = 700;
+//  const speed = 700;
 
-$('.js-color-slide').each(function () {
+// $('.js-color-slide').each(function () {
 
-    const color = $(this).find('.info-colorbox');
-    const image = $(this).find('.info-color-image');
+//     const color = $(this).find('.info-colorbox');
+//     const image = $(this).find('.info-color-image');
 
-    image.css('opacity', 0);
+//     image.css('opacity', 0);
 
-    color.css({
+//     color.css({
+//         width: 0,
+//         right: 0,
+//         left: 'auto'
+//     });
+
+//     let played = false;
+
+//     $(this).on('inview', function (event, isInView) {
+//  if (isInView) {
+
+//         color.stop(true, true).css({
+//             width: 0,
+//             right: 0,
+//             left: 'auto'
+//         });
+
+//         image.css('opacity', 0);
+
+//         color.animate({
+//             width: '100%'
+//         }, speed, function () {
+
+//             image.animate({
+//                 opacity: 1
+//             }, 200);
+
+//             color.css({
+//                 left: 0,
+//                 right: 'auto'
+//             });
+
+//             color.animate({
+//                 width: 0
+//             }, speed);
+
+//         });
+
+//     } else {
+
+//         // 画面外に出たら初期状態へ戻す
+//         image.css('opacity', 0);
+
+//         color.stop(true, true).css({
+//             width: 0,
+//             left: 'auto',
+//             right: 0
+//         });
+
+      
+//     };
+//   });
+// });
+const speed = 700;
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+
+    const target = $(entry.target);
+    const color = target.find(".info-colorbox");
+    const image = target.find(".info-color-image");
+
+    if (entry.isIntersecting) {
+
+      color.stop(true, true).css({
         width: 0,
         right: 0,
-        left: 'auto'
-    });
+        left: "auto",
+      });
 
-    let played = false;
+      image.css("opacity", 0);
 
-    $(this).on('inview', function (event, isInView) {
- if (isInView) {
+      color.animate(
+        {
+          width: "100%",
+        },
+        speed,
+        function () {
 
-        color.stop(true, true).css({
-            width: 0,
-            right: 0,
-            left: 'auto'
-        });
+          image.animate(
+            {
+              opacity: 1,
+            },
+            200
+          );
 
-        image.css('opacity', 0);
+          color.css({
+            left: 0,
+            right: "auto",
+          });
 
-        color.animate({
-            width: '100%'
-        }, speed, function () {
-
-            image.animate({
-                opacity: 1
-            }, 200);
-
-            color.css({
-                left: 0,
-                right: 'auto'
-            });
-
-            color.animate({
-                width: 0
-            }, speed);
-
-        });
+          color.animate(
+            {
+              width: 0,
+            },
+            speed
+          );
+        }
+      );
 
     } else {
 
-        // 画面外に出たら初期状態へ戻す
-        image.css('opacity', 0);
+      image.css("opacity", 0);
 
-        color.stop(true, true).css({
-            width: 0,
-            left: 'auto',
-            right: 0
-        });
+      color.stop(true, true).css({
+        width: 0,
+        left: "auto",
+        right: 0,
+      });
 
-      
-    };
+    }
   });
 });
 
+$(".js-color-slide").each(function () {
+
+  const color = $(this).find(".info-colorbox");
+  const image = $(this).find(".info-color-image");
+
+  image.css("opacity", 0);
+
+  color.css({
+    width: 0,
+    right: 0,
+    left: "auto",
+  });
+
+  observer.observe(this);
+
+});
 
 $(".js-hamberger").on("click", function () {
     $(this).toggleClass("active");

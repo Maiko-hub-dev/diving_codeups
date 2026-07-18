@@ -160,9 +160,30 @@
         padding: 0.35rem 0.75rem 0.25rem;
     }
 }
+.slide__block-title.slide__block-title2{
+    display: inline-block;
+    color: $green;
+    border: $green solid 1px;
+    padding: 0.25rem;
+    line-height: 1.8333;
+    font-size: 0.75rem;
+    font-family: $base-font-family;
+    width: 7.5rem;
+    min-width: 120px;
+    text-align: center;
+    white-space: nowrap;
+    @include mq("md") {
+    padding: 0.25rem 0.75rem;
+    }
+     @include mq("lg") {
+    width: 7.5rem;
+    padding: 0.25rem 0.75rem 0.25rem;
+    }
+}
 .slide__block-txt{
     color: $skelton;
     line-height: 1.5;
+    font-family: $base-font-family;
     font-weight: $medium;
     line-height: 1.5;
     margin-top: 4px;
@@ -179,6 +200,7 @@
     font-size: 0.875rem;
     line-height: 1.1714;
     text-align: center;
+    font-family: $base-font-family;
     @include mq("lg") {
         font-size: 1rem;
         width: 100%;
@@ -208,6 +230,12 @@
         padding-left: 1.25rem;
         font-size: 1.5rem;
     }
+}
+/* 個別指定に変更する */
+.slide__discount {
+  text-decoration-line: line-through;
+  text-decoration-color: $red;
+  text-decoration-thickness: 3px;
 }
 .slide__plice{
     display: inline-block;
