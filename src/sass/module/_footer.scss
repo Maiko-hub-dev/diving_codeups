@@ -91,7 +91,7 @@
     align-items: flex-start;
     width: 100%;
     @include mq("lg") {
-        max-width: 1080px;
+        max-width: $inner;
         margin: 0 auto;
     }
 }
@@ -207,6 +207,7 @@
 }
 .footer-content.footer-content-space{
     @include mq("lg") {
+        padding-top: 0.75rem;
         padding-left: 0.875rem;
     }
 }
@@ -291,7 +292,7 @@
     padding: 0.25rem 0.9375rem 0 0.25rem;
     }
     @include mq("lg") {
-       padding: 0rem 0.9375rem 0; 
+       padding: 0rem 0.9375rem 0 1rem; 
     }
 }
 .footer__link-content.footer__study2{
@@ -302,7 +303,7 @@
     white-space: nowrap;
     padding: 0.5rem 0.9375rem 0 0;
     @include mq("lg") {
-        padding: 0 0.9375rem;
+        padding: 0 0.9375rem 0 0.75rem;
     }
 }
 .footer__link-content.footer__study3{
@@ -352,7 +353,7 @@
     display: inline-block;
     white-space: nowrap;
     @include mq("lg") {
-    padding: 0 0 0 0.875rem;
+    padding: 0 0 0 0.75rem;
     }
 }
 .footer__link-content.footer__link-main-star{
@@ -387,7 +388,7 @@
     padding: 0rem 0.9375rem 0 1.125rem;
     }
       @include mq("xl") {
-     margin: 2rem 0 0.125rem 0;
+     margin: 1.25rem 0 0.125rem 0;
     }
 }
 .footer__item.footer__head,
@@ -433,16 +434,14 @@
 }
 .footer__item.footer__head2.footer__pri{
     @include mq("lg") {
+        padding-top: 0.35rem;
         margin-top: 1.25rem;  
-    }
-    @include mq("xl") {
-    padding-top: 0;
     }
 }
 .footer__head.footer__head-div{
     margin-top: 2.5rem;
     @include mq("lg") {
-        margin-top: 1.25rem;
+        margin-top: 0.5rem;
     }
 }
 .footer__head.footer__star{
@@ -466,8 +465,7 @@
         margin-top: 1.25rem;
     }
     @include mq("xl") {
-        padding-top: 0.5rem;
-        margin-top: 2rem;
+        margin-top: 1.25rem;
     }
 }
 .footer__item.footer__head3.footer__star-law{
@@ -477,7 +475,7 @@
     }
     @include mq("xl") {
         padding-top: 0.5rem;
-        margin-top: 2rem;
+        margin-top: 1.25rem;
     }
 }
 .footer__link.footer__link-title{

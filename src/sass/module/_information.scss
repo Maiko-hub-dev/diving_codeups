@@ -67,6 +67,7 @@
     text-transform: capitalize;
     text-align: center;
     position: relative;
+    font-weight: $regular;
     @include mq("lg") {
         font-size: 2.5rem;
         top: 1.75rem;
@@ -169,6 +170,7 @@
 }
 .information__viewmore.common__btn-wrap{
     @include mq("lg") {
+        margin-top: 2.5rem;
         width: 12.725rem;
         // transform: translateX(-0.5rem);
 }
